@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coldwater Labs | $699 Websites for Local Businesses</title>
+  <meta name="description" content="Coldwater Labs builds clean, fast, mobile-friendly websites for local service businesses. $699 one-time. No monthly fees. You own it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f172a;
+      --navy-mid: #1e293b;
+      --orange: #f97316;
+      --orange-dark: #ea6c08;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --green: #22c55e;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15,23,42,0.96); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-logo { color: var(--white); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; }
+    .nav-logo span { color: var(--orange); }
+    .nav-cta {
+      background: var(--orange); color: var(--white); font-weight: 600;
+      font-size: 0.875rem; padding: 8px 18px; border-radius: 6px;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--orange-dark); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #162040 60%, #1a2f55 100%);
+      padding: 140px 5% 100px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -40%; left: -20%; width: 60%; height: 120%;
+      background: radial-gradient(ellipse, rgba(249,115,22,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(249,115,22,0.15);
+      color: var(--orange);
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(249,115,22,0.25);
+    }
+    .hero h1 {
+      color: var(--white); font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900; line-height: 1.1; letter-spacing: -1.5px;
+      max-width: 800px; margin: 0 auto 20px;
+    }
+    .hero h1 em { color: var(--orange); font-style: normal; }
+    .hero p {
+      color: #94a3b8; font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 560px; margin: 0 auto 40px; line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: var(--white); font-weight: 700;
+      font-size: 1rem; padding: 14px 32px; border-radius: 8px;
+      text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(249,115,22,0.35); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08); color: var(--white); font-weight: 600;
+      font-size: 1rem; padding: 14px 32px; border-radius: 8px;
+      text-decoration: none; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.2);
+      display: inline-block;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.14); }
+    .hero-stats {
+      display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+      margin-top: 60px; padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat { text-align: center; }
+    .stat-num { color: var(--white); font-size: 2rem; font-weight: 800; letter-spacing: -1px; display: block; }
+    .stat-label { color: var(--gray-400); font-size: 0.85rem; }
+
+    /* SECTIONS */
+    section { padding: 80px 5%; }
+    .section-label {
+      color: var(--orange); font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
+      display: block;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800;
+      letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px;
+    }
+    .section-intro { color: var(--gray-600); font-size: 1.1rem; max-width: 560px; margin-bottom: 56px; }
+    .text-center { text-align: center; }
+    .text-center .section-intro { margin-left: auto; margin-right: auto; }
+
+    /* HOW IT WORKS */
+    .how-section { background: var(--gray-50); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+    .step {
+      background: var(--white); border-radius: var(--radius);
+      padding: 32px 28px; border: 1px solid var(--gray-200);
+      position: relative;
+    }
+    .step-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--orange); color: var(--white);
+      font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .step h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+    .step p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.65; }
+    .step-arrow {
+      position: absolute; top: 36px; right: -20px;
+      color: var(--gray-200); font-size: 1.5rem; z-index: 1;
+      display: none;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .portfolio-card {
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none; color: inherit;
+      display: block;
+      background: var(--white);
+    }
+    .portfolio-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .portfolio-thumb {
+      height: 200px; display: flex; align-items: flex-end;
+      padding: 20px; position: relative;
+    }
+    .portfolio-thumb-badge {
+      background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+      color: var(--white); font-size: 0.75rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 100px;
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .pt-plumbing { background: linear-gradient(145deg, #0c2340 0%, #1a4a7a 100%); }
+    .pt-hvac    { background: linear-gradient(145deg, #0d3349 0%, #1a5c7a 100%); }
+    .pt-cleaning { background: linear-gradient(145deg, #0a3d38 0%, #1a6b5c 100%); }
+    .pt-roofing  { background: linear-gradient(145deg, #1a0a0a 0%, #4a1515 100%); }
+    .portfolio-thumb-icon {
+      font-size: 3.5rem; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -60%); opacity: 0.35;
+    }
+    .portfolio-info { padding: 20px 22px; }
+    .portfolio-info h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .portfolio-info p { color: var(--gray-600); font-size: 0.85rem; margin-bottom: 14px; }
+    .portfolio-link {
+      color: var(--orange); font-weight: 600; font-size: 0.875rem;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+
+    /* PRICING */
+    .pricing-section { background: var(--navy); color: var(--white); }
+    .pricing-section h2 { color: var(--white); }
+    .pricing-section .section-intro { color: #94a3b8; }
+    .pricing-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 48px;
+      max-width: 560px; margin: 0 auto 56px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .pricing-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--orange), #fb923c);
+    }
+    .price-amount {
+      font-size: 5rem; font-weight: 900; letter-spacing: -3px;
+      color: var(--white); line-height: 1;
+    }
+    .price-amount sup { font-size: 2rem; vertical-align: top; margin-top: 14px; display: inline-block; }
+    .price-label { color: var(--orange); font-weight: 700; font-size: 0.9rem; margin-bottom: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .includes { list-style: none; text-align: left; margin-bottom: 32px; }
+    .includes li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.95rem; color: #cbd5e1;
+    }
+    .includes li:last-child { border-bottom: none; }
+    .includes li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .addon-heading {
+      color: var(--white); font-size: 1.4rem; font-weight: 700;
+      text-align: center; margin-bottom: 28px;
+    }
+    .addon-table { max-width: 680px; margin: 0 auto; }
+    .addon-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 20px; border-radius: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .addon-row:nth-child(even) { background: rgba(255,255,255,0.03); }
+    .addon-row:last-child { border-bottom: none; }
+    .addon-name { color: #cbd5e1; font-size: 0.95rem; }
+    .addon-price { color: var(--orange); font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
+
+    /* WHY US */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+    .why-card {
+      padding: 28px; border-radius: var(--radius);
+      background: var(--white); border: 1px solid var(--gray-200);
+    }
+    .why-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { color: var(--gray-600); font-size: 0.875rem; line-height: 1.65; }
+
+    /* FAQ */
+    .faq-section { background: var(--gray-50); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    details {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius); margin-bottom: 12px; overflow: hidden;
+    }
+    details[open] { border-color: var(--orange); }
+    summary {
+      padding: 20px 24px; font-weight: 600; cursor: pointer;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.975rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; color: var(--orange); font-size: 1.4rem; font-weight: 400; transition: transform 0.2s; }
+    details[open] summary::after { content: '−'; }
+    .faq-body { padding: 0 24px 20px; color: var(--gray-600); font-size: 0.9rem; line-height: 1.75; }
+
+    /* CONTACT */
+    .contact-section { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; max-width: 960px; margin: 0 auto; }
+    .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+    .contact-info p { color: var(--gray-600); margin-bottom: 28px; line-height: 1.7; }
+    .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .contact-detail-icon { width: 38px; height: 38px; background: var(--gray-100); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-detail-text { font-size: 0.9rem; }
+    .contact-detail-text strong { display: block; font-weight: 600; color: var(--navy); }
+    .contact-detail-text span { color: var(--gray-600); }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    input, textarea, select {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid var(--gray-200); border-radius: 8px;
+      font-family: inherit; font-size: 0.9rem; color: var(--navy);
+      transition: border-color 0.2s; outline: none; background: var(--white);
+    }
+    input:focus, textarea:focus { border-color: var(--orange); }
+    textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      background: var(--orange); color: var(--white); font-weight: 700;
+      padding: 14px; border-radius: 8px; border: none; cursor: pointer;
+      font-size: 1rem; font-family: inherit; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--orange-dark); }
+    .form-success {
+      display: none; background: #f0fdf4; border: 1.5px solid #86efac;
+      border-radius: 8px; padding: 16px; text-align: center;
+      color: #166534; font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy); color: #64748b;
+      padding: 32px 5%; text-align: center; font-size: 0.85rem;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+    footer strong { color: var(--white); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero { padding: 120px 5% 72px; }
+      .hero-stats { gap: 24px; }
+      .pricing-box { padding: 32px 24px; }
+      section { padding: 64px 5%; }
+    }
+    @media (max-width: 480px) {
+      .price-amount { font-size: 3.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Cold<span>water</span> Labs</a>
+  <a href="#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Local Business Websites</div>
+  <h1>Your Website. <em>$699.</em><br>No Monthly Fees. Ever.</h1>
+  <p>We build clean, fast, mobile-first websites for local service businesses. One flat fee — you own it outright, no subscriptions, no surprises.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    <a href="#portfolio" class="btn-secondary">See Our Work</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">$699</span><span class="stat-label">Flat one-time fee</span></div>
+    <div class="stat"><span class="stat-num">7 days</span><span class="stat-label">Average delivery</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Yours — no lock-in</span></div>
+    <div class="stat"><span class="stat-num">$0</span><span class="stat-label">Monthly fees</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="text-center">
+    <span class="section-label">The Process</span>
+    <h2>Simple from start to finish</h2>
+    <p class="section-intro">No long intake forms. No confusing revisions process. Just a quick call, fast build, and a site you're proud to share.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>15-Minute Call</h3>
+      <p>We talk about your business, your services, and what you want customers to do when they land on your site. No pressure, no pitch.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Send Us Your Info</h3>
+      <p>Your logo, a few photos, your services, and your contact details. Phone photos are fine. No need to hire a photographer.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>We Build It</h3>
+      <p>Your site goes live in about 7 business days. Mobile-first, SEO-ready, with a click-to-call button front and center.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>You Own It</h3>
+      <p>7 days of free revisions. Then we hand over every file and login. It's yours — do with it whatever you want, forever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <span class="section-label">Portfolio</span>
+  <h2>Recent Builds</h2>
+  <p class="section-intro">Every site is custom — no cookie-cutter templates. Built for the specific trade, city, and customer base.</p>
+  <div class="portfolio-grid">
+
+    <a href="sample-mid-south-plumbing.html" target="_blank" class="portfolio-card">
+      <div class="portfolio-thumb pt-plumbing">
+        <div class="portfolio-thumb-icon">🔧</div>
+        <span class="portfolio-thumb-badge">Plumbing</span>
+      </div>
+      <div class="portfolio-info">
+        <h3>Mid-South Plumbing</h3>
+        <p>Memphis, TN · Emergency service · Click-to-call focus</p>
+        <span class="portfolio-link">View Site →</span>
+      </div>
+    </a>
+
+    <a href="sample-delta-air-heat.html" target="_blank" class="portfolio-card">
+      <div class="portfolio-thumb pt-hvac">
+        <div class="portfolio-thumb-icon">❄️</div>
+        <span class="portfolio-thumb-badge">HVAC</span>
+      </div>
+      <div class="portfolio-info">
+        <h3>Delta Air & Heat</h3>
+        <p>Memphis, TN · Residential HVAC · Seasonal trust signals</p>
+        <span class="portfolio-link">View Site →</span>
+      </div>
+    </a>
+
+    <a href="sample-capital-city-cleaning.html" target="_blank" class="portfolio-card">
+      <div class="portfolio-thumb pt-cleaning">
+        <div class="portfolio-thumb-icon">✨</div>
+        <span class="portfolio-thumb-badge">Cleaning</span>
+      </div>
+      <div class="portfolio-info">
+        <h3>Capital City Cleaning</h3>
+        <p>Little Rock, AR · Residential cleaning · Booking-focused</p>
+        <span class="portfolio-link">View Site →</span>
+      </div>
+    </a>
+
+    <a href="sample-natural-state-roofing.html" target="_blank" class="portfolio-card">
+      <div class="portfolio-thumb pt-roofing">
+        <div class="portfolio-thumb-icon">🏠</div>
+        <span class="portfolio-thumb-badge">Roofing</span>
+      </div>
+      <div class="portfolio-info">
+        <h3>Natural State Roofing</h3>
+        <p>Little Rock, AR · Residential roofing · Storm damage focus</p>
+        <span class="portfolio-link">View Site →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="text-center">
+    <span class="section-label" style="color:#fb923c;">Pricing</span>
+    <h2>Straightforward pricing.<br>No gotchas.</h2>
+    <p class="section-intro">Other web agencies charge $150–$300/month forever. You pay us once and walk away with a site you own.</p>
+  </div>
+
+  <div class="pricing-box">
+    <div class="price-amount"><sup>$</sup>699</div>
+    <div class="price-label">One-Time · Flat Fee · No Subscriptions</div>
+    <ul class="includes">
+      <li>1–3 page custom website</li>
+      <li>Mobile-first, responsive design</li>
+      <li>Click-to-call button + contact form</li>
+      <li>Google Reviews, Yelp & Facebook links</li>
+      <li>Local SEO setup (titles, meta, schema)</li>
+      <li>Embedded Google Map</li>
+      <li>7 days of free post-delivery revisions</li>
+      <li>30-min training video so you can make edits</li>
+      <li>Full file ownership + all login credentials</li>
+    </ul>
+    <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $699</a>
+  </div>
+
+  <div class="addon-heading">Need changes after delivery? A la carte pricing.</div>
+  <div class="addon-table">
+    <div class="addon-row"><span class="addon-name">Simple text + 1–2 photo update</span><span class="addon-price">$99</span></div>
+    <div class="addon-row"><span class="addon-name">Add a new service or section</span><span class="addon-price">$149–$199</span></div>
+    <div class="addon-row"><span class="addon-name">New photo gallery or testimonials</span><span class="addon-price">$149</span></div>
+    <div class="addon-row"><span class="addon-name">Minor design tweak</span><span class="addon-price">$79</span></div>
+    <div class="addon-row"><span class="addon-name">Booking form / new integration</span><span class="addon-price">$199–$299</span></div>
+    <div class="addon-row"><span class="addon-name">Full new page</span><span class="addon-price">$299</span></div>
+    <div class="addon-row"><span class="addon-name">3-change bundle</span><span class="addon-price">$399</span></div>
+    <div class="addon-row"><span class="addon-name">5-change bundle</span><span class="addon-price">$599</span></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <span class="section-label">Why Coldwater Labs</span>
+  <h2>Built for trades. Not tech bros.</h2>
+  <p class="section-intro">We specialize in one thing: getting local service businesses a site that brings in calls. That focus shows in the work.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">📞</span>
+      <h3>Built to Get Calls</h3>
+      <p>Every site is designed with one goal — get your phone to ring. Click-to-call is prominent, above the fold, and on every page.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">📱</span>
+      <h3>Mobile-First</h3>
+      <p>Over 70% of local searches happen on phones. Your site will look and work perfectly on every device, every screen size.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🔍</span>
+      <h3>Local SEO Built In</h3>
+      <p>Proper titles, meta tags, schema markup, and heading structure baked in from day one — so Google knows exactly where you are and what you do.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🔑</span>
+      <h3>You Own It</h3>
+      <p>When we're done, you get every file and every login. No lock-in, no monthly platform fee, no calling us for permission to make a change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="text-center">
+    <span class="section-label">FAQ</span>
+    <h2>Common questions</h2>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary>Do I need to pay anything monthly?</summary>
+      <div class="faq-body">No. The $699 is a one-time fee and that's it. The only ongoing cost is web hosting, which you set up yourself — we recommend options under $5/month like Namecheap or SiteGround. We can walk you through it.</div>
+    </details>
+    <details>
+      <summary>What if I don't have photos or a logo?</summary>
+      <div class="faq-body">No problem at all. We can use professional stock photography that fits your trade. For a logo, we can use a clean text-based header with your business name. Many of our best-looking builds have no logo at all.</div>
+    </details>
+    <details>
+      <summary>How long does it take?</summary>
+      <div class="faq-body">About 7 business days from the time we have your content (photos, services list, contact info). You can speed this up by sending content quickly. Rush delivery is available — ask about pricing.</div>
+    </details>
+    <details>
+      <summary>What does "you own it" actually mean?</summary>
+      <div class="faq-body">At handover, you receive all exported files plus every login credential (hosting, domain, etc.). You can take it to any developer in the future, move it to any host, or make changes yourself. We have no ongoing access or control.</div>
+    </details>
+    <details>
+      <summary>Will this help me rank on Google?</summary>
+      <div class="faq-body">We build every site with solid SEO fundamentals — proper page titles, meta descriptions, heading structure, schema markup, fast load times, and mobile optimization. This is a strong foundation, though ranking competitively takes time and ongoing content. We're transparent about what $699 covers and what it doesn't.</div>
+    </details>
+    <details>
+      <summary>Can I make changes myself after delivery?</summary>
+      <div class="faq-body">Yes — that's the whole point of the training video. We'll show you how to update text, swap photos, and make basic edits without touching code. For anything bigger, our a la carte update pricing is always available.</div>
+    </details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-label">Get in Touch</span>
+      <h2>Let's talk about your business.</h2>
+      <p>Fill out the form or call/text us directly. We'll respond within one business day and can usually get you a quote on the first call.</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>Call or Text</strong>
+          <span>(901) 899-6698</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div class="contact-detail-text">
+          <strong>Email</strong>
+          <span>hello@coldwaterlabs.com</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">⏱️</div>
+        <div class="contact-detail-text">
+          <strong>Response Time</strong>
+          <span>Within 1 business day</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form id="contactForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Business Name & Type (e.g., ABC Plumbing)" />
+        <textarea placeholder="Tell us a bit about your business and what you need..."></textarea>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+      <div class="form-success" id="formSuccess">✅ Got it! We'll reach out within one business day.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Coldwater Labs</strong> · Germantown, TN · <a href="tel:+19018996698">(901) 899-6698</a> · <a href="mailto:hello@coldwaterlabs.com">hello@coldwaterlabs.com</a>
+  <br /><br />
+  © 2026 Coldwater Labs. All rights reserved. · <a href="https://coldwaterlabs.com">coldwaterlabs.com</a>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>
