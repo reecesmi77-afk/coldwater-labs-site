@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coldwater Labs | $699 Websites for Local Businesses</title>
-  <meta name="description" content="Coldwater Labs builds clean, fast, mobile-friendly websites for local service businesses. $699 one-time. No monthly fees. You own it." />
+  <title>Coldwater Labs | Custom Websites for Local Service Businesses</title>
+  <meta name="description" content="Coldwater Labs builds simple, professional websites for local service businesses — plumbers, HVAC, electricians, roofers and more. One flat fee, no monthly fees, and you own it." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy: #0f172a;
-      --navy-mid: #1e293b;
-      --orange: #f97316;
-      --orange-dark: #ea6c08;
+      --navy: #15314E;
+      --navy-mid: #1E3A5C;
+      --accent: #2E6BB8;
+      --accent-dark: #235699;
+      --accent-light: #7FB3E0;
       --white: #ffffff;
       --gray-50: #f8fafc;
       --gray-100: #f1f5f9;
@@ -32,80 +33,106 @@
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(15,23,42,0.96); backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 5%; height: 64px;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid var(--gray-200);
     }
-    .nav-logo { color: var(--white); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; text-decoration: none; }
-    .nav-logo span { color: var(--orange); }
+    .nav-logo { display: flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; text-decoration: none; }
+    .nav-logo svg { flex-shrink: 0; }
+    .nav-wordmark { color: var(--navy); }
+    .nav-wordmark span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { color: var(--gray-700); font-size: 1.05rem; font-weight: 600; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
     .nav-cta {
-      background: var(--orange); color: var(--white); font-weight: 600;
-      font-size: 0.875rem; padding: 8px 18px; border-radius: 6px;
+      background: var(--accent); color: var(--white); font-weight: 700;
+      font-size: 0.875rem; padding: 9px 20px; border-radius: 6px;
       text-decoration: none; transition: background 0.2s;
     }
-    .nav-cta:hover { background: var(--orange-dark); }
+    .nav-cta:hover { background: var(--accent-dark); }
+    .nav-links a.nav-cta { color: var(--white); }
+    .nav-links a.nav-cta:hover { color: var(--white); }
+    .mission { background: #f5f8fb; text-align: center; }
+    .mission-inner { max-width: 680px; margin: 0 auto; }
+    .mission h2 { color: var(--navy); margin-bottom: 16px; }
+    .mission p { color: var(--gray-600); font-size: 1.08rem; line-height: 1.75; }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #162040 60%, #1a2f55 100%);
-      padding: 140px 5% 100px;
-      text-align: center;
+      background: linear-gradient(135deg, #2E6BB8 0%, #2a64ad 55%, #225a9c 100%);
+      padding: 124px 5% 78px;
       position: relative; overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute; top: -40%; left: -20%; width: 60%; height: 120%;
-      background: radial-gradient(ellipse, rgba(249,115,22,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(255,255,255,0.10) 0%, transparent 70%);
       pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1120px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+      position: relative; z-index: 1;
     }
     .hero-badge {
       display: inline-block;
-      background: rgba(249,115,22,0.15);
-      color: var(--orange);
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+      background: rgba(255,255,255,0.18);
+      color: #ffffff;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
       text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
-      margin-bottom: 24px;
-      border: 1px solid rgba(249,115,22,0.25);
+      margin-bottom: 22px;
+      border: 1px solid rgba(255,255,255,0.35);
     }
     .hero h1 {
-      color: var(--white); font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: var(--white); font-size: clamp(2rem, 4.4vw, 3.4rem);
       font-weight: 900; line-height: 1.1; letter-spacing: -1.5px;
-      max-width: 800px; margin: 0 auto 20px;
+      margin: 0 0 16px;
     }
-    .hero h1 em { color: var(--orange); font-style: normal; }
-    .hero p {
-      color: #94a3b8; font-size: clamp(1rem, 2vw, 1.2rem);
-      max-width: 560px; margin: 0 auto 40px; line-height: 1.7;
+    .hero h1 em { color: var(--accent-light); font-style: normal; }
+    .hero-sub {
+      color: #eaf2fc; font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.65; margin: 0 0 26px; max-width: 520px;
     }
-    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
     .btn-primary {
-      background: var(--orange); color: var(--white); font-weight: 700;
+      background: var(--white); color: var(--navy); font-weight: 800;
       font-size: 1rem; padding: 14px 32px; border-radius: 8px;
       text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
       display: inline-block;
     }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(249,115,22,0.35); }
+    .btn-primary:hover { background: #e8f0f8; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
     .btn-secondary {
       background: rgba(255,255,255,0.08); color: var(--white); font-weight: 600;
       font-size: 1rem; padding: 14px 32px; border-radius: 8px;
-      text-decoration: none; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.2);
+      text-decoration: none; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.25);
       display: inline-block;
     }
     .btn-secondary:hover { background: rgba(255,255,255,0.14); }
-    .hero-stats {
-      display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
-      margin-top: 60px; padding-top: 48px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+    .btn-call {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: var(--white); color: var(--navy); font-weight: 800;
+      font-size: 1.05rem; padding: 14px 26px; border-radius: 8px;
+      text-decoration: none; transition: all 0.2s;
     }
-    .stat { text-align: center; }
-    .stat-num { color: var(--white); font-size: 2rem; font-weight: 800; letter-spacing: -1px; display: block; }
-    .stat-label { color: var(--gray-400); font-size: 0.85rem; }
+    .btn-call svg { width: 18px; height: 18px; }
+    .btn-call:hover { background: #e8f0f8; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+    .btn-ghost {
+      display: inline-block; background: rgba(255,255,255,0.08); color: var(--white);
+      font-weight: 600; font-size: 1rem; padding: 14px 24px; border-radius: 8px;
+      text-decoration: none; border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.14); }
+    .hero-trust { color: #dceaf9; font-size: 0.85rem; margin: 18px 0 0; }
+    .hero-visual { display: flex; justify-content: center; }
+    .hero-devices { position: relative; width: 100%; max-width: 440px; height: 312px; }
+    @media (max-width: 980px) { .hero-devices { transform: scale(0.9); } }
+    @media (max-width: 480px) { .hero-devices { transform: scale(0.74); height: 240px; } }
 
     /* SECTIONS */
     section { padding: 80px 5%; }
     .section-label {
-      color: var(--orange); font-size: 0.8rem; font-weight: 700;
+      color: var(--accent); font-size: 0.8rem; font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
       display: block;
     }
@@ -118,7 +145,7 @@
     .text-center .section-intro { margin-left: auto; margin-right: auto; }
 
     /* HOW IT WORKS */
-    .how-section { background: var(--gray-50); }
+    .how-section { background: var(--white); }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
     .step {
       background: var(--white); border-radius: var(--radius);
@@ -127,7 +154,7 @@
     }
     .step-num {
       width: 40px; height: 40px; border-radius: 50%;
-      background: var(--orange); color: var(--white);
+      background: var(--accent); color: var(--white);
       font-weight: 800; font-size: 1rem;
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 20px;
@@ -178,14 +205,14 @@
     .portfolio-info h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
     .portfolio-info p { color: var(--gray-600); font-size: 0.85rem; margin-bottom: 14px; }
     .portfolio-link {
-      color: var(--orange); font-weight: 600; font-size: 0.875rem;
+      color: var(--accent); font-weight: 600; font-size: 0.875rem;
       display: inline-flex; align-items: center; gap: 4px;
     }
 
     /* PRICING */
     .pricing-section { background: var(--navy); color: var(--white); }
     .pricing-section h2 { color: var(--white); }
-    .pricing-section .section-intro { color: #94a3b8; }
+    .pricing-section .section-intro { color: #b8cce0; }
     .pricing-box {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.12);
@@ -197,14 +224,14 @@
     .pricing-box::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--orange), #fb923c);
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
     }
     .price-amount {
       font-size: 5rem; font-weight: 900; letter-spacing: -3px;
       color: var(--white); line-height: 1;
     }
     .price-amount sup { font-size: 2rem; vertical-align: top; margin-top: 14px; display: inline-block; }
-    .price-label { color: var(--orange); font-weight: 700; font-size: 0.9rem; margin-bottom: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .price-label { color: var(--accent-light); font-weight: 700; font-size: 0.9rem; margin-bottom: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
     .includes { list-style: none; text-align: left; margin-bottom: 32px; }
     .includes li {
       display: flex; align-items: flex-start; gap: 12px;
@@ -226,7 +253,7 @@
     .addon-row:nth-child(even) { background: rgba(255,255,255,0.03); }
     .addon-row:last-child { border-bottom: none; }
     .addon-name { color: #cbd5e1; font-size: 0.95rem; }
-    .addon-price { color: var(--orange); font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
+    .addon-price { color: var(--accent-light); font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
 
     /* WHY US */
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
@@ -245,14 +272,14 @@
       background: var(--white); border: 1px solid var(--gray-200);
       border-radius: var(--radius); margin-bottom: 12px; overflow: hidden;
     }
-    details[open] { border-color: var(--orange); }
+    details[open] { border-color: var(--accent); }
     summary {
       padding: 20px 24px; font-weight: 600; cursor: pointer;
       list-style: none; display: flex; justify-content: space-between; align-items: center;
       font-size: 0.975rem;
     }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; color: var(--orange); font-size: 1.4rem; font-weight: 400; transition: transform 0.2s; }
+    summary::after { content: '+'; color: var(--accent); font-size: 1.4rem; font-weight: 400; transition: transform 0.2s; }
     details[open] summary::after { content: '−'; }
     .faq-body { padding: 0 24px 20px; color: var(--gray-600); font-size: 0.9rem; line-height: 1.75; }
 
@@ -274,14 +301,14 @@
       font-family: inherit; font-size: 0.9rem; color: var(--navy);
       transition: border-color 0.2s; outline: none; background: var(--white);
     }
-    input:focus, textarea:focus { border-color: var(--orange); }
+    input:focus, textarea:focus { border-color: var(--accent); }
     textarea { resize: vertical; min-height: 110px; }
     .form-submit {
-      background: var(--orange); color: var(--white); font-weight: 700;
+      background: var(--accent); color: var(--white); font-weight: 700;
       padding: 14px; border-radius: 8px; border: none; cursor: pointer;
       font-size: 1rem; font-family: inherit; transition: background 0.2s;
     }
-    .form-submit:hover { background: var(--orange-dark); }
+    .form-submit:hover { background: var(--accent-dark); }
     .form-success {
       display: none; background: #f0fdf4; border: 1.5px solid #86efac;
       border-radius: 8px; padding: 16px; text-align: center;
@@ -290,20 +317,26 @@
 
     /* FOOTER */
     footer {
-      background: var(--navy); color: #64748b;
+      background: var(--navy); color: #9fb3c8;
       padding: 32px 5%; text-align: center; font-size: 0.85rem;
     }
-    footer a { color: var(--orange); text-decoration: none; }
+    footer a { color: var(--accent-light); text-decoration: none; }
     footer strong { color: var(--white); }
 
     /* RESPONSIVE */
+    @media (max-width: 820px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+    }
     @media (max-width: 768px) {
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
-      .hero { padding: 120px 5% 72px; }
-      .hero-stats { gap: 24px; }
+      .hero { padding: 110px 5% 64px; }
       .pricing-box { padding: 32px 24px; }
       section { padding: 64px 5%; }
+      .nav-links { gap: 0; }
+      .nav-links a:not(.nav-cta) { display: none; }
     }
     @media (max-width: 480px) {
       .price-amount { font-size: 3.8rem; }
@@ -314,63 +347,153 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Cold<span>water</span> Labs</a>
-  <a href="#contact" class="nav-cta">Get Started</a>
+  <a href="#" class="nav-logo">
+    <svg width="26" height="31" viewBox="0 0 40 48" fill="none" aria-label="Coldwater Labs logo">
+      <path d="M20 47 C20 47 5 30 5 18 A15 15 0 1 1 35 18 C35 30 20 47 20 47 Z" fill="#15314E"/>
+      <rect x="11" y="9.5" width="18" height="16" rx="3" fill="#ffffff"/>
+      <rect x="13.6" y="12.2" width="4.2" height="4.2" rx="1" fill="#2E6BB8"/>
+      <rect x="19.2" y="12.6" width="7.4" height="1.6" rx="0.8" fill="#cbd5e1"/>
+      <rect x="13.6" y="18.4" width="13" height="1.5" rx="0.75" fill="#cbd5e1"/>
+      <rect x="13.6" y="21.2" width="9" height="1.5" rx="0.75" fill="#cbd5e1"/>
+    </svg>
+    <span class="nav-wordmark">Coldwater <span>Labs</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#industries">Industries</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Get My Free Quote</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Local Business Websites</div>
-  <h1>Your Website. <em>$699.</em><br>No Monthly Fees. Ever.</h1>
-  <p>We build clean, fast, mobile-first websites for local service businesses. One flat fee — you own it outright, no subscriptions, no surprises.</p>
-  <div class="hero-actions">
-    <a href="#contact" class="btn-primary">Get a Free Quote</a>
-    <a href="#portfolio" class="btn-secondary">See Our Work</a>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">Flat-Rate Custom Home Service Websites</div>
+      <h1>Higher Trust. More Traffic. More Leads.</h1>
+      <p class="hero-sub">Straightforward pricing for business owners. Website live in 7 days or less.</p>
+      <div class="hero-actions">
+        <a href="tel:+19018996698" class="btn-call">
+          <svg viewBox="0 0 24 24" fill="#15314E" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Call or Text — (901) 899-6698
+        </a>
+        <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+      </div>
+      <p class="hero-trust">No monthly fees · You own it · Real people, not a call center</p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-devices">
+
+        <div style="position:absolute; right:0; top:6px; width:270px;">
+          <div style="background:#1f2937; border-radius:9px; padding:5px; box-shadow:0 16px 40px rgba(0,0,0,0.35);">
+            <div style="background:#fff; border-radius:5px; overflow:hidden; height:160px;">
+              <div style="background:#fff; height:20px; display:flex; align-items:center; justify-content:space-between; padding:0 8px; border-bottom:1px solid #eef1f5;">
+                <span style="font-size:7.5px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
+                <span style="font-size:7px; color:#2E6BB8;">Call (901) 555-0148</span>
+              </div>
+              <div style="background:#15314E; padding:18px 12px; text-align:center;">
+                <p style="color:#fff; font-size:11px; font-weight:800; margin:0 0 7px; line-height:1.2;">Honest Heating &amp; Cooling You Can Trust</p>
+                <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:8px; font-weight:700; padding:5px 12px; border-radius:4px;">Call Now</span>
+              </div>
+              <div style="display:flex; gap:6px; padding:8px;">
+                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
+                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
+                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
+              </div>
+            </div>
+          </div>
+          <div style="width:30px; height:14px; background:#cbd5e1; margin:0 auto;"></div>
+          <div style="width:80px; height:6px; background:#cbd5e1; border-radius:0 0 6px 6px; margin:0 auto;"></div>
+        </div>
+
+        <div style="position:absolute; left:0; bottom:34px; width:210px; z-index:2;">
+          <div style="background:#1f2937; border-radius:7px; padding:4px; box-shadow:0 16px 40px rgba(0,0,0,0.35);">
+            <div style="background:#fff; border-radius:4px; overflow:hidden; height:120px;">
+              <div style="background:#fff; height:16px; display:flex; align-items:center; padding:0 7px; border-bottom:1px solid #eef1f5;">
+                <span style="font-size:6.5px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
+              </div>
+              <div style="background:#15314E; padding:14px 10px; text-align:center;">
+                <p style="color:#fff; font-size:9px; font-weight:800; margin:0 0 6px; line-height:1.2;">Heating &amp; Cooling Done Right</p>
+                <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:7px; font-weight:700; padding:4px 10px; border-radius:3px;">Call Now</span>
+              </div>
+              <div style="display:flex; gap:5px; padding:7px;">
+                <span style="flex:1; height:22px; background:#eef1f5; border-radius:3px;"></span>
+                <span style="flex:1; height:22px; background:#eef1f5; border-radius:3px;"></span>
+              </div>
+            </div>
+          </div>
+          <div style="width:248px; height:9px; background:#cbd5e1; border-radius:0 0 7px 7px; margin-left:-19px;"></div>
+        </div>
+
+        <div style="position:absolute; right:-8px; bottom:55px; width:84px; z-index:3;">
+          <div style="background:#0f1f33; border-radius:14px; padding:4px; box-shadow:0 16px 40px rgba(0,0,0,0.4);">
+            <div style="background:#fff; border-radius:11px; overflow:hidden;">
+              <div style="background:#0c2340; height:13px; display:flex; align-items:center; justify-content:center;">
+                <span style="font-size:5.5px; font-weight:700; color:#fff;">Delta Air &amp; Heat</span>
+              </div>
+              <div style="background:#15314E; padding:11px 7px; text-align:center;">
+                <p style="color:#fff; font-size:7px; font-weight:800; margin:0 0 5px; line-height:1.15;">Same-Day Service</p>
+                <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:5.5px; font-weight:700; padding:3px 8px; border-radius:3px;">Call Now</span>
+              </div>
+              <div style="padding:6px;">
+                <span style="display:block; height:14px; background:#eef1f5; border-radius:3px;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <div class="hero-stats">
-    <div class="stat"><span class="stat-num">$699</span><span class="stat-label">Flat one-time fee</span></div>
-    <div class="stat"><span class="stat-num">7 days</span><span class="stat-label">Average delivery</span></div>
-    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Yours — no lock-in</span></div>
-    <div class="stat"><span class="stat-num">$0</span><span class="stat-label">Monthly fees</span></div>
+</section>
+
+<!-- ABOUT / MISSION -->
+<section class="mission" id="about">
+  <div class="mission-inner">
+    <span class="section-label" style="color:var(--accent);">Our mission</span>
+    <h2>Making a great website simple for local tradesmen.</h2>
+    <p>Most website companies talk over your head, lock you into monthly fees, and disappear when you need them. Coldwater Labs does the opposite. We build you one clean, professional website for one flat fee, set it up so customers can find you and call you, then hand you the keys. No jargon, no subscriptions, no runaround — just a website that works, backed by real people who pick up the phone.</p>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="how-section" id="how">
   <div class="text-center">
-    <span class="section-label">The Process</span>
+    <span class="section-label">How It Works</span>
     <h2>Simple from start to finish</h2>
-    <p class="section-intro">No long intake forms. No confusing revisions process. Just a quick call, fast build, and a site you're proud to share.</p>
+    <p class="section-intro">No long forms. No confusing back-and-forth. Just a quick call, a fast build, and a site you're proud to hand out.</p>
   </div>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <h3>15-Minute Call</h3>
-      <p>We talk about your business, your services, and what you want customers to do when they land on your site. No pressure, no pitch.</p>
+      <h3>We Talk for 15 Minutes</h3>
+      <p>We talk about your business, what you do, and what you want customers to do when they land on your site. No pressure, no sales pitch.</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <h3>Send Us Your Info</h3>
-      <p>Your logo, a few photos, your services, and your contact details. Phone photos are fine. No need to hire a photographer.</p>
+      <h3>You Send Us Your Info</h3>
+      <p>Your services, a few photos, and your contact details. Photos from your phone are perfectly fine. No need to hire a photographer.</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
       <h3>We Build It</h3>
-      <p>Your site goes live in about 7 business days. Mobile-first, SEO-ready, with a click-to-call button front and center.</p>
+      <p>We build your site, then revise it with you until it's exactly to your liking. Once you approve it, it goes live in about 7 business days — built to work great on phones, with your phone number front and center so customers can reach you fast.</p>
     </div>
     <div class="step">
       <div class="step-num">4</div>
-      <h3>You Own It</h3>
-      <p>7 days of free revisions. Then we hand over every file and login. It's yours — do with it whatever you want, forever.</p>
+      <h3>It's Yours</h3>
+      <p>7 days of free changes. Then we hand over every file and login. It's yours — keep it, move it, change it, whatever you want, forever.</p>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio">
-  <span class="section-label">Portfolio</span>
+<section id="portfolio" style="background:#f5f8fb;">
+  <span class="section-label">Examples</span>
   <h2>Recent Builds</h2>
-  <p class="section-intro">Every site is custom — no cookie-cutter templates. Built for the specific trade, city, and customer base.</p>
+  <p class="section-intro">Every site is built from scratch — no templates. Made for the specific trade, town, and customers.</p>
   <div class="portfolio-grid">
 
     <a href="sample-mid-south-plumbing.html" target="_blank" class="portfolio-card">
@@ -380,7 +503,7 @@
       </div>
       <div class="portfolio-info">
         <h3>Mid-South Plumbing</h3>
-        <p>Memphis, TN · Emergency service · Click-to-call focus</p>
+        <p>Memphis, TN · Emergency service · Built to get calls</p>
         <span class="portfolio-link">View Site →</span>
       </div>
     </a>
@@ -392,7 +515,7 @@
       </div>
       <div class="portfolio-info">
         <h3>Delta Air & Heat</h3>
-        <p>Memphis, TN · Residential HVAC · Seasonal trust signals</p>
+        <p>Memphis, TN · Heating & cooling · Built on trust</p>
         <span class="portfolio-link">View Site →</span>
       </div>
     </a>
@@ -404,7 +527,7 @@
       </div>
       <div class="portfolio-info">
         <h3>Capital City Cleaning</h3>
-        <p>Little Rock, AR · Residential cleaning · Booking-focused</p>
+        <p>Little Rock, AR · Home cleaning · Easy to book</p>
         <span class="portfolio-link">View Site →</span>
       </div>
     </a>
@@ -416,7 +539,7 @@
       </div>
       <div class="portfolio-info">
         <h3>Natural State Roofing</h3>
-        <p>Little Rock, AR · Residential roofing · Storm damage focus</p>
+        <p>Little Rock, AR · Roofing · Storm damage focus</p>
         <span class="portfolio-link">View Site →</span>
       </div>
     </a>
@@ -427,66 +550,56 @@
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="text-center">
-    <span class="section-label" style="color:#fb923c;">Pricing</span>
-    <h2>Straightforward pricing.<br>No gotchas.</h2>
-    <p class="section-intro">Other web agencies charge $150–$300/month forever. You pay us once and walk away with a site you own.</p>
+    <span class="section-label" style="color:var(--accent-light);">Pricing</span>
+    <h2>One price. No gotchas.</h2>
+    <p class="section-intro">Other companies charge $150–$300 every month, forever. You pay one flat fee and walk away owning your site.</p>
   </div>
 
   <div class="pricing-box">
-    <div class="price-amount"><sup>$</sup>699</div>
-    <div class="price-label">One-Time · Flat Fee · No Subscriptions</div>
+    <div class="price-amount"><sup>$</sup>697</div>
+    <div class="price-label">One Time · Flat Fee · No Subscriptions</div>
     <ul class="includes">
-      <li>1–3 page custom website</li>
-      <li>Mobile-first, responsive design</li>
-      <li>Click-to-call button + contact form</li>
-      <li>Google Reviews, Yelp & Facebook links</li>
-      <li>Local SEO setup (titles, meta, schema)</li>
-      <li>Embedded Google Map</li>
-      <li>7 days of free post-delivery revisions</li>
-      <li>30-min training video so you can make edits</li>
-      <li>Full file ownership + all login credentials</li>
+      <li>1–3 page website, built just for you</li>
+      <li>Looks great on phones, tablets, and computers</li>
+      <li>Big tap-to-call button + simple contact form</li>
+      <li>Links to your Google, Yelp & Facebook</li>
+      <li>Set up so Google can find you</li>
+      <li>A map showing customers where to find you</li>
+      <li>7 days of free changes after it's done</li>
+      <li>A short video showing you how to make simple edits</li>
+      <li>Every file and login is yours to keep</li>
     </ul>
-    <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $699</a>
+    <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $697</a>
   </div>
 
-  <div class="addon-heading">Need changes after delivery? A la carte pricing.</div>
-  <div class="addon-table">
-    <div class="addon-row"><span class="addon-name">Simple text + 1–2 photo update</span><span class="addon-price">$99</span></div>
-    <div class="addon-row"><span class="addon-name">Add a new service or section</span><span class="addon-price">$149–$199</span></div>
-    <div class="addon-row"><span class="addon-name">New photo gallery or testimonials</span><span class="addon-price">$149</span></div>
-    <div class="addon-row"><span class="addon-name">Minor design tweak</span><span class="addon-price">$79</span></div>
-    <div class="addon-row"><span class="addon-name">Booking form / new integration</span><span class="addon-price">$199–$299</span></div>
-    <div class="addon-row"><span class="addon-name">Full new page</span><span class="addon-price">$299</span></div>
-    <div class="addon-row"><span class="addon-name">3-change bundle</span><span class="addon-price">$399</span></div>
-    <div class="addon-row"><span class="addon-name">5-change bundle</span><span class="addon-price">$599</span></div>
-  </div>
+  <!-- Add-on / change-order pricing moved to the dedicated pricing page (to build next) -->
 </section>
 
 <!-- WHY US -->
 <section>
   <span class="section-label">Why Coldwater Labs</span>
-  <h2>Built for trades. Not tech bros.</h2>
-  <p class="section-intro">We specialize in one thing: getting local service businesses a site that brings in calls. That focus shows in the work.</p>
+  <h2>Built for tradesmen. Not tech bros.</h2>
+  <p class="section-intro">We do one thing: get local service businesses a website that brings in calls. That focus shows in the work.</p>
   <div class="why-grid">
     <div class="why-card">
       <span class="why-icon">📞</span>
-      <h3>Built to Get Calls</h3>
-      <p>Every site is designed with one goal — get your phone to ring. Click-to-call is prominent, above the fold, and on every page.</p>
+      <h3>Built to Get You Calls</h3>
+      <p>Every site is built for one thing — getting your phone to ring. A big tap-to-call button sits right up top, on every page.</p>
     </div>
     <div class="why-card">
       <span class="why-icon">📱</span>
-      <h3>Mobile-First</h3>
-      <p>Over 70% of local searches happen on phones. Your site will look and work perfectly on every device, every screen size.</p>
+      <h3>Works Great on Phones</h3>
+      <p>Most folks will pull you up on their phone. Your site looks sharp and works perfectly there — easy to read, easy to tap, easy to call.</p>
     </div>
     <div class="why-card">
       <span class="why-icon">🔍</span>
-      <h3>Local SEO Built In</h3>
-      <p>Proper titles, meta tags, schema markup, and heading structure baked in from day one — so Google knows exactly where you are and what you do.</p>
+      <h3>Easy to Find on Google</h3>
+      <p>We set everything up so Google clearly knows who you are, what you do, and the towns you serve — so the right local customers can find you.</p>
     </div>
     <div class="why-card">
       <span class="why-icon">🔑</span>
       <h3>You Own It</h3>
-      <p>When we're done, you get every file and every login. No lock-in, no monthly platform fee, no calling us for permission to make a change.</p>
+      <p>When we're done, you get every file and every login. No lock-in, no monthly fee, no calling us for permission to make a change.</p>
     </div>
   </div>
 </section>
@@ -494,33 +607,33 @@
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="text-center">
-    <span class="section-label">FAQ</span>
+    <span class="section-label">Questions</span>
     <h2>Common questions</h2>
   </div>
   <div class="faq-list">
     <details>
-      <summary>Do I need to pay anything monthly?</summary>
-      <div class="faq-body">No. The $699 is a one-time fee and that's it. The only ongoing cost is web hosting, which you set up yourself — we recommend options under $5/month like Namecheap or SiteGround. We can walk you through it.</div>
+      <summary>Do I have to pay anything every month?</summary>
+      <div class="faq-body">No. It's a one-time fee and that's it. The only ongoing cost is web hosting, which you set up yourself — there are good options under $5/month, and we'll walk you through it so it's easy.</div>
     </details>
     <details>
       <summary>What if I don't have photos or a logo?</summary>
-      <div class="faq-body">No problem at all. We can use professional stock photography that fits your trade. For a logo, we can use a clean text-based header with your business name. Many of our best-looking builds have no logo at all.</div>
+      <div class="faq-body">No problem at all. We can use professional stock photos that fit your trade. For a logo, a clean header with your business name looks great — plenty of our best builds have no logo at all.</div>
     </details>
     <details>
       <summary>How long does it take?</summary>
-      <div class="faq-body">About 7 business days from the time we have your content (photos, services list, contact info). You can speed this up by sending content quickly. Rush delivery is available — ask about pricing.</div>
+      <div class="faq-body">About 7 business days from the time we have your info (photos, services, contact details). Send your stuff quickly and it goes faster. Need it sooner? Just ask — rush delivery is available.</div>
     </details>
     <details>
       <summary>What does "you own it" actually mean?</summary>
-      <div class="faq-body">At handover, you receive all exported files plus every login credential (hosting, domain, etc.). You can take it to any developer in the future, move it to any host, or make changes yourself. We have no ongoing access or control.</div>
+      <div class="faq-body">When it's done, you get all the files plus every login (hosting, domain, and so on). You can take it to any other person down the road, move it anywhere, or change it yourself. We keep no control over it.</div>
     </details>
     <details>
-      <summary>Will this help me rank on Google?</summary>
-      <div class="faq-body">We build every site with solid SEO fundamentals — proper page titles, meta descriptions, heading structure, schema markup, fast load times, and mobile optimization. This is a strong foundation, though ranking competitively takes time and ongoing content. We're transparent about what $699 covers and what it doesn't.</div>
+      <summary>Will this get me to the top of Google?</summary>
+      <div class="faq-body">We build every site so Google can clearly see who you are, what you do, and where you're located — and so it loads fast and works on phones. That's a strong start. Getting to the very top takes time and ongoing work, and we'll always be straight with you about what's included and what isn't.</div>
     </details>
     <details>
-      <summary>Can I make changes myself after delivery?</summary>
-      <div class="faq-body">Yes — that's the whole point of the training video. We'll show you how to update text, swap photos, and make basic edits without touching code. For anything bigger, our a la carte update pricing is always available.</div>
+      <summary>Can I make changes myself after it's done?</summary>
+      <div class="faq-body">Yes — that's what the training video is for. We'll show you how to update text and swap photos without touching any code. For bigger changes, our simple update pricing is always there.</div>
     </details>
   </div>
 </section>
@@ -531,7 +644,7 @@
     <div class="contact-info">
       <span class="section-label">Get in Touch</span>
       <h2>Let's talk about your business.</h2>
-      <p>Fill out the form or call/text us directly. We'll respond within one business day and can usually get you a quote on the first call.</p>
+      <p>Fill out the form or just call or text us — a real person answers, never a call center. We'll get back to you within one business day, and can usually give you a price on the first call.</p>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
         <div class="contact-detail-text">
@@ -549,7 +662,7 @@
       <div class="contact-detail">
         <div class="contact-detail-icon">⏱️</div>
         <div class="contact-detail-text">
-          <strong>Response Time</strong>
+          <strong>We'll Get Back to You</strong>
           <span>Within 1 business day</span>
         </div>
       </div>
