@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capital City Cleaning | House Cleaning in Little Rock, AR</title>
+  <meta name="description" content="Capital City Cleaning offers professional house cleaning in Little Rock, AR. Recurring cleans, deep cleans, move-in/out. Trusted, insured, locally owned. Call (501) 555-0184." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HouseCleaning",
+    "name": "Capital City Cleaning",
+    "telephone": "+15015550184",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4821 Cantrell Rd",
+      "addressLocality": "Little Rock",
+      "addressRegion": "AR",
+      "postalCode": "72207"
+    },
+    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 09:00-14:00"],
+    "url": "https://capitalcitycleaning.com"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal-dark: #0d4f47; --teal-mid: #0f766e; --teal: #14b8a6;
+      --teal-light: #ccfbf1; --white: #fff;
+      --gray-50: #f8fffe; --gray-100: #f0fdfa; --gray-200: #ccfbf1;
+      --gray-600: #475569; --gray-700: #334155; --dark: #1e293b;
+      --accent: #f59e0b; --green: #22c55e; --radius: 10px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.07); --shadow-lg: 0 12px 36px rgba(0,0,0,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--dark); background: var(--white); line-height: 1.6; }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .logo-text { font-weight: 800; font-size: 1.05rem; color: var(--teal-dark); letter-spacing: -0.5px; }
+    .logo-text span { color: var(--teal); }
+    .header-cta {
+      background: var(--teal); color: var(--white); font-weight: 700;
+      padding: 10px 20px; border-radius: 6px; text-decoration: none;
+      font-size: 0.9rem; transition: background 0.2s; white-space: nowrap;
+    }
+    .header-cta:hover { background: var(--teal-mid); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, #0a6b61 50%, var(--teal-mid) 100%);
+      padding: 80px 5% 72px; color: var(--white);
+    }
+    .hero-inner { max-width: 600px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(20,184,166,0.2); border: 1px solid rgba(20,184,166,0.35);
+      color: #5eead4; font-size: 0.8rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 900;
+      line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 18px;
+    }
+    .hero h1 em { color: #5eead4; font-style: normal; }
+    .hero p { color: #99f6e4; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--teal); color: var(--white); font-weight: 700;
+      padding: 15px 28px; border-radius: 8px; text-decoration: none;
+      font-size: 1rem; transition: all 0.2s; display: inline-block;
+    }
+    .btn-primary:hover { background: #0d9488; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(20,184,166,0.4); }
+    .btn-outline {
+      background: transparent; color: var(--white); font-weight: 600;
+      padding: 15px 28px; border-radius: 8px; text-decoration: none;
+      font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.3); transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); }
+    .hero-trust { display: flex; gap: 24px; margin-top: 36px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 7px; font-size: 0.85rem; color: #99f6e4; }
+    .trust-item::before { content: '✓'; color: #4ade80; font-weight: 700; }
+
+    /* SECTIONS */
+    section { padding: 72px 5%; }
+    .tag { color: var(--teal); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 12px; }
+    .sub { color: var(--gray-600); font-size: 1rem; margin-bottom: 48px; max-width: 540px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    /* SERVICES */
+    .services-section { background: var(--gray-100); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--gray-200); padding: 28px 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--teal-dark); }
+    .service-card p { color: var(--gray-600); font-size: 0.875rem; line-height: 1.65; }
+    .service-price { display: inline-block; margin-top: 12px; background: var(--teal-light); color: var(--teal-dark); font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+
+    /* HOW IT WORKS */
+    .process-section { background: var(--white); }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .process-step { text-align: center; padding: 28px 20px; }
+    .step-circle { width: 56px; height: 56px; background: var(--teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.4rem; }
+    .process-step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: var(--gray-600); font-size: 0.85rem; line-height: 1.65; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--teal-dark); color: var(--white); }
+    .trust-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; text-align: center; }
+    .trust-strip .num { font-size: 2.4rem; font-weight: 900; color: #5eead4; letter-spacing: -1px; display: block; }
+    .trust-strip .lbl { color: #99f6e4; font-size: 0.85rem; }
+    .badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+    .tbadge { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); color: #ccfbf1; padding: 7px 16px; border-radius: 100px; font-size: 0.82rem; }
+
+    /* REVIEWS */
+    .reviews-section { background: var(--gray-100); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .review-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--gray-200); padding: 24px;
+    }
+    .stars { color: #f59e0b; margin-bottom: 12px; }
+    .review-text { color: var(--gray-700); font-size: 0.9rem; line-height: 1.7; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-weight: 700; font-size: 0.85rem; color: var(--teal-dark); }
+    .reviewer span { color: var(--gray-600); font-weight: 400; }
+    .review-links { display: flex; gap: 12px; margin-top: 32px; justify-content: center; flex-wrap: wrap; }
+    .rl { background: var(--white); border: 1px solid var(--gray-200); color: var(--gray-700); padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
+    .rl:hover { border-color: var(--teal); }
+
+    /* CONTACT */
+    .contact-section { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+    .contact-left p { color: var(--gray-600); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.7; }
+    .cta-book {
+      display: block; background: var(--teal); color: var(--white);
+      text-align: center; font-weight: 700; font-size: 1.1rem;
+      padding: 18px; border-radius: 8px; text-decoration: none;
+      margin-bottom: 16px; transition: background 0.2s;
+    }
+    .cta-book:hover { background: var(--teal-mid); }
+    .cta-call {
+      display: block; background: var(--white); color: var(--teal-dark);
+      text-align: center; font-weight: 600; font-size: 1rem;
+      padding: 14px; border-radius: 8px; text-decoration: none;
+      border: 1.5px solid var(--gray-200); margin-bottom: 20px; transition: border-color 0.2s;
+    }
+    .cta-call:hover { border-color: var(--teal); }
+    .info-block { font-size: 0.875rem; color: var(--gray-600); line-height: 2; }
+    .info-block strong { color: var(--dark); }
+    form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    input, textarea, select {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--gray-200); border-radius: 8px;
+      font-family: inherit; font-size: 0.875rem; color: var(--dark); outline: none;
+      transition: border-color 0.2s; background: var(--white);
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--teal); }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-btn {
+      background: var(--teal-dark); color: var(--white); font-weight: 700;
+      padding: 14px; border-radius: 8px; border: none; cursor: pointer;
+      font-size: 0.95rem; font-family: inherit; transition: background 0.2s;
+    }
+    .form-btn:hover { background: var(--teal-mid); }
+    .map-block {
+      background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: var(--radius);
+      height: 180px; display: flex; align-items: center; justify-content: center;
+      color: var(--teal); font-size: 0.875rem; margin-top: 16px;
+    }
+
+    /* FOOTER */
+    footer { background: var(--teal-dark); color: #99f6e4; padding: 40px 5%; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+    .footer-brand { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+    .footer-links { display: flex; gap: 16px; font-size: 0.82rem; flex-wrap: wrap; }
+    .footer-links a { color: #99f6e4; text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; text-align: center; color: #5eead4; }
+
+    .back-bar { background: var(--gray-100); padding: 10px 5%; font-size: 0.82rem; border-bottom: 1px solid var(--gray-200); }
+    .back-bar a { color: var(--teal); text-decoration: none; font-weight: 600; }
+    .float-cta {
+      display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      background: var(--teal); color: var(--white); font-weight: 700;
+      padding: 14px 32px; border-radius: 100px; text-decoration: none;
+      font-size: 1rem; box-shadow: 0 8px 24px rgba(20,184,166,0.4); z-index: 200; white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .float-cta { display: block; }
+      section { padding: 56px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="back-bar">← <a href="index.html">Back to Coldwater Labs Portfolio</a></div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">✨</div>
+    <span class="logo-text">Capital City <span>Cleaning</span></span>
+  </div>
+  <a href="tel:+15015550184" class="header-cta">📞 (501) 555-0184</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">✨ Little Rock's Trusted House Cleaners</div>
+    <h1>A <em>Spotlessly Clean</em> Home,<br>Without Lifting a Finger.</h1>
+    <p>Professional, reliable, and thorough. We clean Little Rock homes the right way — so you can spend your time on what matters.</p>
+    <div class="hero-actions">
+      <a href="tel:+15015550184" class="btn-primary">📞 Call (501) 555-0184</a>
+      <a href="#contact" class="btn-outline">Book a Cleaning</a>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-item">Bonded & Insured</span>
+      <span class="trust-item">Background-Checked Cleaners</span>
+      <span class="trust-item">100% Satisfaction Guarantee</span>
+      <span class="trust-item">Locally Owned</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <span class="tag">Services</span>
+  <h2>House Cleaning Services in Little Rock</h2>
+  <p class="sub">Whether you need a one-time deep clean or a reliable recurring schedule — we show up on time and get it done right.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🗓️</span>
+      <h3>Recurring Cleaning</h3>
+      <p>Weekly, bi-weekly, or monthly service on a schedule that works for you. Same crew, same standards, every visit. Set it and forget it.</p>
+      <span class="service-price">Starting at $120</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🧹</span>
+      <h3>Deep Cleaning</h3>
+      <p>A thorough, top-to-bottom clean for homes that need extra attention. Baseboards, inside appliances, grout lines, window sills, and more.</p>
+      <span class="service-price">Starting at $220</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📦</span>
+      <h3>Move-In / Move-Out</h3>
+      <p>Move-out cleans for renters and sellers, move-in cleans for buyers and new tenants. Leave it spotless — get your deposit back.</p>
+      <span class="service-price">Starting at $250</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏢</span>
+      <h3>Post-Construction</h3>
+      <p>New build or renovation? We remove dust, debris, and contractor mess so your space is livable and clean from day one.</p>
+      <span class="service-price">Custom quote</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎉</span>
+      <h3>One-Time / Occasion Clean</h3>
+      <p>Hosting a party, out-of-town guests, or just overdue for a clean? One-time visits available with no recurring commitment required.</p>
+      <span class="service-price">Starting at $150</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <h3>Airbnb & Rental Turnover</h3>
+      <p>Reliable, fast turnovers between guests. We work around your check-in/check-out schedule so you never leave a guest waiting.</p>
+      <span class="service-price">By unit size</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section">
+  <div class="center">
+    <span class="tag">How It Works</span>
+    <h2>Book in minutes. We handle the rest.</h2>
+    <p class="sub">No long phone calls. No complicated contracts. Just tell us what you need and we'll take care of it.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-circle">📞</div>
+      <h3>Call or Book Online</h3>
+      <p>Tell us your home size and what type of clean you need. We'll give you a price upfront — no hidden fees.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">🗓️</div>
+      <h3>Pick Your Day & Time</h3>
+      <p>We'll schedule a convenient time. Most new bookings are available within 3–5 days.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">✨</div>
+      <h3>We Clean — You Relax</h3>
+      <p>Our background-checked cleaners arrive on time and get to work. You don't need to be home.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">😊</div>
+      <h3>Enjoy Your Clean Home</h3>
+      <p>100% satisfaction guaranteed. If anything doesn't meet your standards, we'll come back and fix it — free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-strip">
+    <div><span class="num">700+</span><span class="lbl">Happy homes cleaned</span></div>
+    <div><span class="num">5★</span><span class="lbl">Google rating (90+ reviews)</span></div>
+    <div><span class="num">100%</span><span class="lbl">Satisfaction guaranteed</span></div>
+    <div><span class="num">6 yrs</span><span class="lbl">Serving Little Rock</span></div>
+  </div>
+  <div class="badge-row">
+    <span class="tbadge">✓ Bonded & Insured</span>
+    <span class="tbadge">✓ Background-Checked</span>
+    <span class="tbadge">✓ Locally Owned</span>
+    <span class="tbadge">✓ Eco-Friendly Products Available</span>
+    <span class="tbadge">✓ No Contracts for Recurring</span>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="center">
+    <span class="tag">Reviews</span>
+    <h2>What Little Rock homeowners say</h2>
+    <p class="sub" style="margin-left:auto;margin-right:auto;">5 stars on Google. Real reviews from real customers.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"I've tried three cleaning services in Little Rock. Capital City is the only one that actually does what they say they'll do — every time. The bathroom grout alone was worth the price."</p>
+      <div class="reviewer">Sarah B. <span>— Heights, Little Rock</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Used them for a move-out clean and got my full deposit back. My landlord even said it was the cleanest the unit had ever looked. Would absolutely use again."</p>
+      <div class="reviewer">Tanya M. <span>— West Little Rock, AR</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"We have bi-weekly service and it's one of the best decisions we've made as a family. The team is always on time, always professional, and our house always smells amazing after."</p>
+      <div class="reviewer">The Hendersons <span>— Chenal Valley, AR</span></div>
+    </div>
+  </div>
+  <div class="review-links">
+    <a href="#" class="rl">⭐ 5.0 on Google (90+ reviews)</a>
+    <a href="#" class="rl">⭐ Yelp Reviews</a>
+    <a href="#" class="rl">👍 Facebook</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <span class="tag">Book a Cleaning</span>
+      <h2>Ready for a cleaner home?</h2>
+      <p>Call or fill out the form to get a quote and schedule your first clean. We respond to all requests within a few hours.</p>
+      <a href="#contactForm" class="cta-book">✨ Book Online</a>
+      <a href="tel:+15015550184" class="cta-call">📞 Call (501) 555-0184</a>
+      <div class="info-block">
+        <strong>Location:</strong> Serving Little Rock & surrounding areas<br>
+        <strong>Hours:</strong> Mon–Fri 8am–5pm · Sat 9am–2pm<br>
+        <strong>Email:</strong> hello@capitalcitycleaning.com<br>
+        <strong>Service Area:</strong> Little Rock, North Little Rock, Conway, Benton, Bryant
+      </div>
+      <div class="map-block">📍 Google Map — Little Rock, AR</div>
+    </div>
+    <div id="contactForm">
+      <form id="cleanForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Home Address (for accurate quote)" />
+        <div class="form-row">
+          <select>
+            <option value="">Type of Cleaning</option>
+            <option>Recurring — Weekly</option>
+            <option>Recurring — Bi-Weekly</option>
+            <option>Recurring — Monthly</option>
+            <option>One-Time / Occasion</option>
+            <option>Deep Clean</option>
+            <option>Move-In / Move-Out</option>
+            <option>Airbnb / Rental Turnover</option>
+          </select>
+          <select>
+            <option value="">Home Size</option>
+            <option>Studio / 1 bed</option>
+            <option>2 bedrooms</option>
+            <option>3 bedrooms</option>
+            <option>4+ bedrooms</option>
+          </select>
+        </div>
+        <textarea placeholder="Anything else we should know? (pets, entry instructions, specific areas of focus)"></textarea>
+        <button type="submit" class="form-btn">Get My Free Quote →</button>
+      </form>
+      <div id="cleanSuccess" style="display:none; background:#f0fdfa; border:1.5px solid #5eead4; border-radius:8px; padding:16px; text-align:center; color:#0d4f47; font-weight:600; margin-top:8px;">
+        ✅ Thanks! We'll reach out with your quote within 2 hours.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Capital City Cleaning</div>
+      <div style="font-size:0.8rem;margin-top:4px;color:#5eead4;">Little Rock, AR · Bonded & Insured · Locally Owned</div>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Book a Clean</a>
+      <a href="tel:+15015550184">(501) 555-0184</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Capital City Cleaning. All rights reserved. · Website by <a href="index.html" style="color:#5eead4;">Coldwater Labs</a>
+  </div>
+</footer>
+
+<a href="tel:+15015550184" class="float-cta">📞 Book Now — (501) 555-0184</a>
+
+<script>
+  document.getElementById('cleanForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('cleanSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>

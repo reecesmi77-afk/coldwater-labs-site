@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mid-South Plumbing | Plumber in Memphis, TN</title>
+  <meta name="description" content="Mid-South Plumbing is Memphis's trusted plumber. Same-day service, licensed & insured. Call (901) 555-0147 for drain cleaning, water heaters, leak repair & more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Mid-South Plumbing",
+    "telephone": "+19015550147",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1842 Poplar Ave",
+      "addressLocality": "Memphis",
+      "addressRegion": "TN",
+      "postalCode": "38104"
+    },
+    "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
+    "url": "https://midsouthplumbing.com"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0c2340; --navy-mid: #163456; --orange: #f97316;
+      --orange-dark: #ea6c08; --white: #fff;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+      --gray-400: #94a3b8; --gray-600: #475569; --gray-700: #334155;
+      --red: #dc2626; --green: #16a34a; --radius: 10px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 12px 36px rgba(0,0,0,0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
+
+    /* EMERGENCY BANNER */
+    .emergency-bar {
+      background: var(--red); color: var(--white);
+      text-align: center; padding: 10px 20px; font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .emergency-bar a { color: var(--white); text-decoration: underline; }
+
+    /* STICKY HEADER */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .logo { color: var(--white); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.5px; }
+    .logo span { color: var(--orange); }
+    .header-cta {
+      background: var(--orange); color: var(--white); font-weight: 700;
+      padding: 10px 20px; border-radius: 6px; text-decoration: none;
+      font-size: 0.9rem; transition: background 0.2s; white-space: nowrap;
+    }
+    .header-cta:hover { background: var(--orange-dark); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1a4878 100%);
+      padding: 80px 5% 72px; color: var(--white);
+    }
+    .hero-inner { max-width: 640px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3);
+      color: #fb923c; font-size: 0.8rem; font-weight: 600;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900;
+      line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 18px;
+    }
+    .hero p { color: #94a3b8; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-call {
+      background: var(--orange); color: var(--white); font-weight: 700;
+      padding: 15px 28px; border-radius: 8px; text-decoration: none;
+      font-size: 1rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-call:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(249,115,22,0.4); }
+    .btn-outline {
+      background: transparent; color: var(--white); font-weight: 600;
+      padding: 15px 28px; border-radius: 8px; text-decoration: none;
+      font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.3); transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); }
+    .hero-trust { display: flex; gap: 24px; margin-top: 36px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 7px; font-size: 0.85rem; color: #94a3b8; }
+    .trust-item::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+    /* SECTIONS */
+    section { padding: 72px 5%; }
+    .section-tag { color: var(--orange); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 12px; }
+    .sub { color: var(--gray-600); font-size: 1rem; margin-bottom: 48px; max-width: 540px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    /* SERVICES */
+    .services-section { background: var(--gray-50); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--gray-200); padding: 28px 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .service-card p { color: var(--gray-600); font-size: 0.875rem; line-height: 1.65; }
+
+    /* TRUST */
+    .trust-section { background: var(--navy); color: var(--white); }
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; text-align: center; }
+    .trust-stat .num { font-size: 2.8rem; font-weight: 900; color: var(--orange); letter-spacing: -2px; display: block; }
+    .trust-stat .lbl { color: #94a3b8; font-size: 0.875rem; }
+    .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
+    .badge-pill {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: #e2e8f0; padding: 8px 18px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;
+    }
+
+    /* REVIEWS */
+    .reviews-section { background: var(--gray-50); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .review-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--gray-200); padding: 24px;
+    }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; }
+    .review-text { color: var(--gray-700); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .reviewer { font-weight: 700; font-size: 0.85rem; }
+    .reviewer span { color: var(--gray-400); font-weight: 400; }
+    .review-source { display: flex; gap: 16px; margin-top: 28px; }
+    .source-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gray-100); color: var(--gray-700);
+      padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 600;
+      text-decoration: none; border: 1px solid var(--gray-200); transition: border-color 0.2s;
+    }
+    .source-link:hover { border-color: var(--gray-400); }
+
+    /* CONTACT */
+    .contact-section { background: var(--white); }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+    .contact-left h2 { margin-bottom: 16px; }
+    .contact-left p { color: var(--gray-600); margin-bottom: 28px; }
+    .cta-big {
+      display: block; background: var(--orange); color: var(--white);
+      text-align: center; font-weight: 700; font-size: 1.1rem;
+      padding: 18px; border-radius: 8px; text-decoration: none;
+      margin-bottom: 16px; transition: background 0.2s;
+    }
+    .cta-big:hover { background: var(--orange-dark); }
+    .contact-meta { font-size: 0.875rem; color: var(--gray-600); line-height: 2; }
+    .contact-meta strong { color: var(--navy); }
+    form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    input, textarea, select {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--gray-200); border-radius: 8px;
+      font-family: inherit; font-size: 0.875rem; color: var(--navy); outline: none;
+      transition: border-color 0.2s; background: var(--white);
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--orange); }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-btn {
+      background: var(--navy); color: var(--white); font-weight: 700;
+      padding: 14px; border-radius: 8px; border: none; cursor: pointer;
+      font-size: 0.95rem; font-family: inherit; transition: background 0.2s;
+    }
+    .form-btn:hover { background: var(--navy-mid); }
+    .map-embed {
+      background: var(--gray-100); border-radius: var(--radius);
+      height: 200px; display: flex; align-items: center; justify-content: center;
+      color: var(--gray-400); font-size: 0.875rem; margin-top: 16px;
+      border: 1px solid var(--gray-200);
+    }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: #64748b; padding: 40px 5%; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+    .footer-brand { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+    .footer-brand span { color: var(--orange); }
+    .footer-links { display: flex; gap: 16px; font-size: 0.82rem; flex-wrap: wrap; }
+    .footer-links a { color: #64748b; text-decoration: none; }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-bottom { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.8rem; text-align: center; }
+
+    /* BACK LINK */
+    .back-bar {
+      background: var(--gray-100); padding: 10px 5%;
+      font-size: 0.82rem; border-bottom: 1px solid var(--gray-200);
+    }
+    .back-bar a { color: var(--orange); text-decoration: none; font-weight: 600; }
+    .back-bar a:hover { text-decoration: underline; }
+
+    /* FLOATING MOBILE CTA */
+    .float-cta {
+      display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      background: var(--orange); color: var(--white); font-weight: 700;
+      padding: 14px 32px; border-radius: 100px; text-decoration: none;
+      font-size: 1rem; box-shadow: 0 8px 24px rgba(249,115,22,0.4); z-index: 200;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .float-cta { display: block; }
+      section { padding: 56px 5%; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 60px 5% 56px; }
+      header { height: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="back-bar">← <a href="index.html">Back to Coldwater Labs Portfolio</a></div>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency-bar">
+  🚨 Plumbing Emergency? We answer 24/7 — <a href="tel:+19015550147">Call (901) 555-0147</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Mid-South <span>Plumbing</span></div>
+  <a href="tel:+19015550147" class="header-cta">📞 Call Now: (901) 555-0147</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🏆 Memphis's Trusted Plumber Since 2009</div>
+    <h1>Honest Plumbing.<br>Fair Prices.<br>Same-Day Service.</h1>
+    <p>Licensed, insured, and local. We fix leaks, clear drains, replace water heaters, and handle anything in your pipes — fast.</p>
+    <div class="hero-actions">
+      <a href="tel:+19015550147" class="btn-call">📞 Call (901) 555-0147</a>
+      <a href="#contact" class="btn-outline">Get a Free Estimate</a>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-item">Licensed & Insured</span>
+      <span class="trust-item">15+ Years in Memphis</span>
+      <span class="trust-item">Free Estimates</span>
+      <span class="trust-item">No Trip Charges</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <span class="section-tag">What We Do</span>
+  <h2>Full-Service Plumbing for Memphis Homes & Businesses</h2>
+  <p class="sub">From a leaky faucet to a full re-pipe — we do it all. Same-day availability on most jobs.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🚿</span>
+      <h3>Drain Cleaning</h3>
+      <p>Slow or clogged drains cleared fast. Kitchen, bathroom, and main line clogs — we use professional hydro-jetting equipment for lasting results.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔥</span>
+      <h3>Water Heater Repair & Replacement</h3>
+      <p>No hot water? We repair and replace all brands, including tankless units. Most water heater jobs are done same day.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💧</span>
+      <h3>Leak Detection & Repair</h3>
+      <p>Wall leaks, slab leaks, and pipe bursts located and repaired. We use non-destructive leak detection to save your walls and floors.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚽</span>
+      <h3>Toilet Repair & Installation</h3>
+      <p>Running toilets, weak flushes, and complete toilet replacements. We carry common parts on the truck for faster repairs.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <h3>Whole-Home Re-Pipe</h3>
+      <p>Old galvanized or failing pipes replaced with modern PEX or copper. Full re-pipes on residential homes with minimal drywall disruption.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🆘</span>
+      <h3>24/7 Emergency Service</h3>
+      <p>Burst pipe at midnight? We pick up. No after-hours surcharge on most jobs. Memphis and Shelby County — we're close.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STATS -->
+<section class="trust-section">
+  <div class="trust-grid">
+    <div class="trust-stat"><span class="num">15+</span><span class="lbl">Years serving Memphis</span></div>
+    <div class="trust-stat"><span class="num">2,400+</span><span class="lbl">Jobs completed</span></div>
+    <div class="trust-stat"><span class="num">4.9★</span><span class="lbl">Google rating (180+ reviews)</span></div>
+    <div class="trust-stat"><span class="num">Same Day</span><span class="lbl">Service available</span></div>
+  </div>
+  <div class="badges">
+    <span class="badge-pill">✓ Licensed — TN Plumbing Lic. #P012847</span>
+    <span class="badge-pill">✓ Fully Insured</span>
+    <span class="badge-pill">✓ Local — Memphis Based</span>
+    <span class="badge-pill">✓ Free Estimates</span>
+    <span class="badge-pill">✓ Financing Available</span>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="center">
+    <span class="section-tag">Reviews</span>
+    <h2>What Memphis homeowners say</h2>
+    <p class="sub">Don't take our word for it — see what your neighbors think.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Called at 9pm about a burst pipe under my kitchen sink. They were at my house within an hour, fixed it same night, and didn't charge me an arm and a leg. These guys are the real deal."</p>
+      <div class="reviewer">Marcus T. <span>— Midtown Memphis</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"My water heater finally gave out and I needed a replacement fast. Mid-South had a new unit installed the same afternoon I called. Honest pricing, no upsells, friendly crew."</p>
+      <div class="reviewer">Carla W. <span>— Germantown, TN</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Used them for a slow drain that three other plumbers couldn't fix permanently. They hydro-jetted the main line and explained exactly what was going on. Haven't had an issue since."</p>
+      <div class="reviewer">James R. <span>— East Memphis</span></div>
+    </div>
+  </div>
+  <div class="review-source" style="justify-content:center; margin-top:32px;">
+    <a href="#" class="source-link">⭐ 4.9 on Google (180+ reviews)</a>
+    <a href="#" class="source-link">⭐ 4.8 on Yelp</a>
+    <a href="#" class="source-link">👍 Facebook</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Schedule Service or Get a Free Estimate</h2>
+      <p>Call or text for the fastest response. We're typically available same day for non-emergency work — and always available for emergencies.</p>
+      <a href="tel:+19015550147" class="cta-big">📞 Call (901) 555-0147</a>
+      <div class="contact-meta">
+        <strong>Address:</strong> 1842 Poplar Ave, Memphis, TN 38104<br>
+        <strong>Hours:</strong> Mon–Fri 7am–6pm · Sat 8am–2pm<br>
+        <strong>Emergency:</strong> 24/7 — always on call<br>
+        <strong>Email:</strong> info@midsouthplumbing.com
+      </div>
+      <div class="map-embed">📍 Google Map — Memphis, TN</div>
+    </div>
+    <div>
+      <form id="plumbForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <input type="email" placeholder="Email Address" />
+        <select>
+          <option value="">Type of Service Needed</option>
+          <option>Drain Cleaning</option>
+          <option>Water Heater Repair/Replace</option>
+          <option>Leak Detection & Repair</option>
+          <option>Toilet Repair/Installation</option>
+          <option>Emergency Service</option>
+          <option>Other / Not Sure</option>
+        </select>
+        <textarea placeholder="Describe the issue (optional — helps us prepare)"></textarea>
+        <button type="submit" class="form-btn">Request a Free Estimate →</button>
+      </form>
+      <div id="plumbSuccess" style="display:none; background:#f0fdf4; border:1.5px solid #86efac; border-radius:8px; padding:16px; text-align:center; color:#166534; font-weight:600; margin-top:8px;">
+        ✅ Got it! We'll call you within 1 hour during business hours.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Mid-South <span>Plumbing</span></div>
+      <div style="font-size:0.8rem; margin-top:4px;">Memphis, TN · Licensed & Insured · TN Lic. #P012847</div>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+19015550147">(901) 555-0147</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Mid-South Plumbing. All rights reserved. · Website by <a href="index.html" style="color:#f97316;">Coldwater Labs</a>
+  </div>
+</footer>
+
+<!-- FLOATING MOBILE CTA -->
+<a href="tel:+19015550147" class="float-cta">📞 Call Now — (901) 555-0147</a>
+
+<script>
+  document.getElementById('plumbForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('plumbSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>
