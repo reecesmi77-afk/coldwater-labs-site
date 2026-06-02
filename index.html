@@ -101,10 +101,12 @@
       border: 1px solid rgba(255,255,255,0.35);
     }
     .hero h1 {
-      color: var(--white); font-size: clamp(2rem, 4.4vw, 3.4rem);
-      font-weight: 900; line-height: 1.1; letter-spacing: -1.5px;
-      margin: 0 0 16px;
+      color: var(--white); font-size: clamp(1.7rem, 3.4vw, 2.8rem);
+      font-weight: 900; line-height: 1.05; letter-spacing: -1px;
+      margin: 0 0 18px; display: flex; flex-direction: column; gap: 10px;
     }
+    .hero h1 .hl { display: flex; align-items: center; gap: 13px; }
+    .hero h1 .hl-check { width: 1em; height: 1em; flex: none; }
     .hero h1 em { color: var(--accent-light); font-style: normal; }
     .hero-sub {
       color: #eaf2fc; font-size: clamp(1rem, 1.5vw, 1.15rem);
@@ -210,6 +212,16 @@
     .pt-hvac    { background: linear-gradient(145deg, #0d3349 0%, #1a5c7a 100%); }
     .pt-cleaning { background: linear-gradient(145deg, #0a3d38 0%, #1a6b5c 100%); }
     .pt-roofing  { background: linear-gradient(145deg, #1a0a0a 0%, #4a1515 100%); }
+    .mini-site { font-size: 10px; line-height: 1.2; }
+    .ms-topbar { color: #fff; font-size: 8px; font-weight: 700; text-align: center; padding: 5px 8px; }
+    .ms-header { background: #fff; display: flex; align-items: center; justify-content: space-between; padding: 7px 11px; border-bottom: 1px solid #eef1f5; }
+    .ms-logo { font-size: 11px; font-weight: 800; color: #0a2342; letter-spacing: -0.3px; }
+    .ms-call { color: #fff; font-size: 8px; font-weight: 800; padding: 4px 9px; border-radius: 100px; white-space: nowrap; }
+    .ms-hero { background: #0a2342; padding: 15px 14px 17px; min-height: 92px; }
+    .ms-stars { color: #f5b50a; font-size: 9px; font-weight: 700; display: block; margin-bottom: 7px; }
+    .ms-stars span { color: #b9cbe2; font-weight: 600; }
+    .ms-h1 { color: #fff; font-size: 15px; font-weight: 800; letter-spacing: -0.4px; line-height: 1.14; margin: 0 0 11px; }
+    .ms-cta { display: inline-block; color: #fff; font-size: 9px; font-weight: 800; padding: 6px 12px; border-radius: 7px; }
     .portfolio-info { padding: 20px 22px; }
     .portfolio-info h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
     .portfolio-info p { color: var(--gray-600); font-size: 0.85rem; margin-bottom: 14px; }
@@ -394,6 +406,8 @@
       .hero-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
       .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
+      .hero h1 { align-items: center; }
+      .hero h1 .hl { justify-content: center; }
     }
     @media (max-width: 768px) {
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -440,7 +454,11 @@
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="hero-badge">Flat-Rate Custom Home Service Websites</div>
-      <h1>Higher Trust. More Traffic. More Leads.</h1>
+      <h1>
+        <span class="hl"><svg class="hl-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#34A853"/><path d="M7 12.4l3.2 3.2L17 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#86b6f2;">Higher Search Engine Trust</span></span>
+        <span class="hl"><svg class="hl-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#34A853"/><path d="M7 12.4l3.2 3.2L17 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#ff6b63;">More Traffic</span></span>
+        <span class="hl"><svg class="hl-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#34A853"/><path d="M7 12.4l3.2 3.2L17 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color:#fbbc05;">More Leads</span></span>
+      </h1>
       <p class="hero-sub">Straightforward pricing for business owners. Website live in 7 days or less.</p>
       <div class="hero-actions">
         <a href="tel:+19018996698" class="btn-call">
@@ -454,51 +472,58 @@
     <div class="hero-visual">
       <div class="hero-devices">
 
-        <div style="position:absolute; right:0; top:6px; width:270px;">
-          <div style="background:#1f2937; border-radius:9px; padding:5px; box-shadow:0 16px 40px rgba(0,0,0,0.35);">
-            <div style="background:#fff; border-radius:5px; overflow:hidden; height:160px;">
-              <div style="background:#fff; height:20px; display:flex; align-items:center; justify-content:space-between; padding:0 8px; border-bottom:1px solid #eef1f5;">
-                <span style="font-size:7.5px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
-                <span style="font-size:7px; color:#2E6BB8;">Call (901) 555-0148</span>
-              </div>
-              <div style="background:#15314E; padding:18px 12px; text-align:center;">
-                <p style="color:#fff; font-size:11px; font-weight:800; margin:0 0 7px; line-height:1.2;">Honest Heating &amp; Cooling You Can Trust</p>
-                <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:8px; font-weight:700; padding:5px 12px; border-radius:4px;">Call Now</span>
-              </div>
-              <div style="display:flex; gap:6px; padding:8px;">
-                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
-                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
-                <span style="flex:1; height:30px; background:#eef1f5; border-radius:4px;"></span>
-              </div>
-            </div>
-          </div>
-          <div style="width:30px; height:14px; background:#cbd5e1; margin:0 auto;"></div>
-          <div style="width:80px; height:6px; background:#cbd5e1; border-radius:0 0 6px 6px; margin:0 auto;"></div>
-        </div>
-
-        <div style="position:absolute; left:0; bottom:34px; width:210px; z-index:2;">
-          <div style="background:#1f2937; border-radius:7px; padding:4px; box-shadow:0 16px 40px rgba(0,0,0,0.35);">
-            <div style="background:#fff; border-radius:4px; overflow:hidden; height:120px;">
-              <div style="background:#fff; height:16px; display:flex; align-items:center; padding:0 7px; border-bottom:1px solid #eef1f5;">
-                <span style="font-size:6.5px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
-              </div>
-              <div style="background:#15314E; padding:14px 10px; text-align:center;">
-                <p style="color:#fff; font-size:9px; font-weight:800; margin:0 0 6px; line-height:1.2;">Heating &amp; Cooling Done Right</p>
-                <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:7px; font-weight:700; padding:4px 10px; border-radius:3px;">Call Now</span>
-              </div>
-              <div style="display:flex; gap:5px; padding:7px;">
-                <span style="flex:1; height:22px; background:#eef1f5; border-radius:3px;"></span>
-                <span style="flex:1; height:22px; background:#eef1f5; border-radius:3px;"></span>
+        <div style="position:absolute; left:0; top:8px; width:248px;">
+          <div style="background:#d6dbe1; border-radius:12px; padding:8px 8px 18px; box-shadow:0 18px 40px rgba(0,0,0,0.28);">
+            <div style="background:#0b0c0f; border-radius:5px; padding:4px;">
+              <div style="background:#fff; border-radius:2px; overflow:hidden; height:150px;">
+                <div style="height:18px; display:flex; align-items:center; justify-content:space-between; padding:0 8px; border-bottom:1px solid #eef1f5;">
+                  <span style="font-size:7.5px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
+                  <span style="font-size:7px; font-weight:700; color:#2E6BB8;">Call (901) 555-0148</span>
+                </div>
+                <div style="background:#15314E; padding:18px 12px; text-align:center;">
+                  <p style="color:#fff; font-size:11px; font-weight:800; margin:0 0 7px; line-height:1.2;">Honest Heating &amp; Cooling You Can Trust</p>
+                  <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:8px; font-weight:700; padding:5px 12px; border-radius:4px;">Call Now</span>
+                </div>
+                <div style="display:flex; gap:6px; padding:8px;">
+                  <span style="flex:1; height:28px; background:#eef1f5; border-radius:4px;"></span>
+                  <span style="flex:1; height:28px; background:#eef1f5; border-radius:4px;"></span>
+                  <span style="flex:1; height:28px; background:#eef1f5; border-radius:4px;"></span>
+                </div>
               </div>
             </div>
           </div>
-          <div style="width:248px; height:9px; background:#cbd5e1; border-radius:0 0 7px 7px; margin-left:-19px;"></div>
+          <div style="width:52px; height:30px; background:#c2c8cf; margin:0 auto;"></div>
+          <div style="width:150px; height:9px; background:#b1b8c0; border-radius:5px; margin:0 auto;"></div>
         </div>
 
-        <div style="position:absolute; right:-8px; bottom:55px; width:84px; z-index:3;">
-          <div style="background:#0f1f33; border-radius:14px; padding:4px; box-shadow:0 16px 40px rgba(0,0,0,0.4);">
-            <div style="background:#fff; border-radius:11px; overflow:hidden;">
-              <div style="background:#0c2340; height:13px; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute; right:0; bottom:30px; width:226px; z-index:2;">
+          <div style="background:#cdd3da; border-radius:9px 9px 6px 6px; padding:7px; box-shadow:0 18px 40px rgba(0,0,0,0.26);">
+            <div style="background:#0b0c0f; border-radius:4px; padding:3px;">
+              <div style="background:#fff; border-radius:2px; overflow:hidden; height:128px;">
+                <div style="height:16px; display:flex; align-items:center; padding:0 8px; border-bottom:1px solid #eef1f5;">
+                  <span style="font-size:7px; font-weight:800; color:#15314E;">Delta Air &amp; Heat</span>
+                </div>
+                <div style="background:#15314E; padding:15px 10px; text-align:center;">
+                  <p style="color:#fff; font-size:9.5px; font-weight:800; margin:0 0 6px; line-height:1.2;">Heating &amp; Cooling Done Right</p>
+                  <span style="display:inline-block; background:#2E6BB8; color:#fff; font-size:7px; font-weight:700; padding:4px 10px; border-radius:3px;">Call Now</span>
+                </div>
+                <div style="display:flex; gap:6px; padding:8px;">
+                  <span style="flex:1; height:24px; background:#eef1f5; border-radius:3px;"></span>
+                  <span style="flex:1; height:24px; background:#eef1f5; border-radius:3px;"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="width:262px; height:12px; background:#bcc2cb; border-radius:0 0 10px 10px; margin-left:-18px; position:relative;">
+            <div style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:44px; height:5px; background:#9aa2ab; border-radius:0 0 6px 6px;"></div>
+          </div>
+        </div>
+
+        <div style="position:absolute; left:42%; bottom:14px; width:80px; z-index:3;">
+          <div style="background:#15171a; border-radius:16px; padding:3px; box-shadow:0 16px 34px rgba(0,0,0,0.34);">
+            <div style="background:#000; border-radius:13px; overflow:hidden; position:relative;">
+              <div style="position:absolute; top:4px; left:50%; transform:translateX(-50%); width:26px; height:6px; background:#000; border-radius:4px; z-index:6;"></div>
+              <div style="background:#0c2340; height:15px; display:flex; align-items:center; justify-content:center;">
                 <span style="font-size:5.5px; font-weight:700; color:#fff;">Delta Air &amp; Heat</span>
               </div>
               <div style="background:#15314E; padding:11px 7px; text-align:center;">
@@ -678,10 +703,17 @@
         <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
         <span class="browser-url">midsouthplumbing.com</span>
       </div>
-      <div class="mini-hero pt-plumbing">
-        <span class="mini-brand">MID-SOUTH PLUMBING</span>
-        <p class="mini-headline">Honest Plumbing. Same-Day Service.</p>
-        <span class="mini-cta">Call Now</span>
+      <div class="mini-site">
+        <div class="ms-topbar" style="background:#e01e2b;">Call (901) 555-0147 · Answering 24/7</div>
+        <div class="ms-header">
+          <span class="ms-logo">Mid-South <b style="color:#e01e2b;">Plumbing</b></span>
+          <span class="ms-call" style="background:#e01e2b;">Call Now</span>
+        </div>
+        <div class="ms-hero">
+          <span class="ms-stars">★★★★★ <span>4.9 Google reviews</span></span>
+          <p class="ms-h1">Memphis's Trusted Plumber</p>
+          <span class="ms-cta" style="background:#e01e2b;">Call (901) 555-0147</span>
+        </div>
       </div>
       <div class="portfolio-info">
         <h3>Mid-South Plumbing</h3>
@@ -695,10 +727,17 @@
         <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
         <span class="browser-url">deltaairheat.com</span>
       </div>
-      <div class="mini-hero pt-hvac">
-        <span class="mini-brand">DELTA AIR &amp; HEAT</span>
-        <p class="mini-headline">Comfortable All Year Long.</p>
-        <span class="mini-cta">Call Now</span>
+      <div class="mini-site">
+        <div class="ms-topbar" style="background:#1f74d6;">Call (901) 555-0162 · Answering 24/7</div>
+        <div class="ms-header">
+          <span class="ms-logo">Delta Air <b style="color:#1f74d6;">&amp; Heat</b></span>
+          <span class="ms-call" style="background:#1f74d6;">Call Now</span>
+        </div>
+        <div class="ms-hero">
+          <span class="ms-stars">★★★★★ <span>4.9 Google reviews</span></span>
+          <p class="ms-h1">Memphis's Trusted Heating &amp; Cooling</p>
+          <span class="ms-cta" style="background:#1f74d6;">Call (901) 555-0162</span>
+        </div>
       </div>
       <div class="portfolio-info">
         <h3>Delta Air & Heat</h3>
@@ -712,10 +751,17 @@
         <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
         <span class="browser-url">capitalcitycleaning.com</span>
       </div>
-      <div class="mini-hero pt-cleaning">
-        <span class="mini-brand">CAPITAL CITY CLEANING</span>
-        <p class="mini-headline">A Spotlessly Clean Home.</p>
-        <span class="mini-cta">Get a Quote</span>
+      <div class="mini-site">
+        <div class="ms-topbar" style="background:#0d9268;">Call (501) 555-0139 · Now Booking</div>
+        <div class="ms-header">
+          <span class="ms-logo">Capital City <b style="color:#0d9268;">Cleaning</b></span>
+          <span class="ms-call" style="background:#0d9268;">Get a Quote</span>
+        </div>
+        <div class="ms-hero">
+          <span class="ms-stars">★★★★★ <span>4.9 Google reviews</span></span>
+          <p class="ms-h1">Little Rock's Trusted Home Cleaners</p>
+          <span class="ms-cta" style="background:#0d9268;">Get a Free Quote</span>
+        </div>
       </div>
       <div class="portfolio-info">
         <h3>Capital City Cleaning</h3>
@@ -729,10 +775,17 @@
         <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
         <span class="browser-url">naturalstateroofing.com</span>
       </div>
-      <div class="mini-hero pt-roofing">
-        <span class="mini-brand">NATURAL STATE ROOFING</span>
-        <p class="mini-headline">Your Roof Done Right.</p>
-        <span class="mini-cta">Call Now</span>
+      <div class="mini-site">
+        <div class="ms-topbar" style="background:#c0492a;">Call (501) 555-0174 · Storm Response 24/7</div>
+        <div class="ms-header">
+          <span class="ms-logo">Natural State <b style="color:#c0492a;">Roofing</b></span>
+          <span class="ms-call" style="background:#c0492a;">Call Now</span>
+        </div>
+        <div class="ms-hero">
+          <span class="ms-stars">★★★★★ <span>4.8 Google reviews</span></span>
+          <p class="ms-h1">Conway's Trusted Roofers</p>
+          <span class="ms-cta" style="background:#c0492a;">Call (501) 555-0174</span>
+        </div>
       </div>
       <div class="portfolio-info">
         <h3>Natural State Roofing</h3>
