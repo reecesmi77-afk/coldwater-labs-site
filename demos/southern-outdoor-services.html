@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Southern Outdoor Services | Trusted Cordova Lawn Care · Same-Day Service</title>
+<meta name="description" content="Southern Outdoor Services — Cordova's trusted, licensed lawn care. Same-day service, upfront pricing, 24/7 emergency. Call (901) 609-0480." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Southern Outdoor Services",
+  "telephone": "+19016090480",
+  "priceRange": "$$",
+  "areaServed": "Cordova",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cordova", "addressRegion": "TN" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "100+" }
+}
+</script>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#0a2342; --navy-2:#123a63; --navy-3:#1c4d80;
+    --red:#4CAF50; --red-dark:#3d8c40; --red-soft:#eaf5ea;
+    --gold:#f5b50a; --white:#fff; --ink:#0d1b2a;
+    --g50:#f6f9fc; --g100:#eef3f8; --g200:#e0e8f1; --g300:#cdd9e6;
+    --g500:#64748b; --g600:#475569; --g700:#334155;
+    --radius:14px; --radius-lg:22px;
+    --shadow-sm:0 2px 10px rgba(10,35,66,.07);
+    --shadow:0 14px 40px rgba(10,35,66,.12);
+    --shadow-red:0 10px 26px rgba(224,30,43,.30);
+    --maxw:1180px;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand-name{font-family:'Plus Jakarta Sans','Manrope',sans-serif}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .center{text-align:center}
+
+  .topbar{background:var(--red);color:#fff;text-align:center;font-size:.86rem;font-weight:600;padding:9px 16px}
+  .topbar a{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:2px}
+
+  header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--g200)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{flex:none;display:flex;align-items:center}
+  .brand-mark svg{height:40px;width:auto;display:block}
+  .brand-lock{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-weight:800;font-size:1.18rem;color:var(--navy);letter-spacing:-.5px;white-space:nowrap}
+  .brand-name .wm-sub{font-weight:600;color:#5b6b7e}
+  .brand-tag{display:flex;align-items:center;gap:7px;margin-top:6px;font-size:.6rem;font-weight:700;letter-spacing:.16em;color:#5b6b7e;text-transform:uppercase;white-space:nowrap}
+  .brand-tag .rule{display:block;width:22px;height:3px;border-radius:2px;background:var(--red);flex:none}
+  .brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--g600);text-transform:uppercase}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-size:.92rem;font-weight:600;color:var(--g700);transition:color .15s;white-space:nowrap}
+  .nav-links a:hover{color:var(--red)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-phone{text-align:right;line-height:1.1}
+  .nav-phone .lbl{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g600)}
+  .nav-phone .num{font-size:1.16rem;font-weight:800;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;border-radius:100px;cursor:pointer;border:none;white-space:nowrap;transition:transform .15s,box-shadow .15s,background .15s}
+  .btn svg{width:18px;height:18px}
+  .btn-red{background:var(--red);color:#fff;padding:13px 24px;box-shadow:var(--shadow-red)}
+  .btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+  .btn-white{background:#fff;color:var(--red);padding:14px 26px}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+  .btn-lg{padding:16px 30px;font-size:1.05rem}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:radial-gradient(1100px 480px at 85% -10%,rgba(28,77,128,.5),transparent 60%),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#0e2e52 100%);color:#fff;overflow:hidden}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.04fr .96fr;gap:46px;align-items:center;padding:64px 24px 76px;max-width:var(--maxw);margin:0 auto}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:.78rem;font-weight:700;padding:7px 15px;border-radius:100px;margin-bottom:20px}
+  .pill .stars{color:var(--gold);letter-spacing:1px}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;line-height:1.08;letter-spacing:-1.4px;margin-bottom:16px}
+  .hero h1 em{color:#ff6671;font-style:normal}
+  .hero-lead{font-size:1.08rem;color:#c4d3e6;max-width:520px;margin-bottom:28px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-trust{display:flex;gap:24px;margin-top:30px;flex-wrap:wrap}
+  .ht{display:flex;align-items:center;gap:8px;font-size:.88rem;color:#cdddf0;font-weight:600}
+  .ht svg{width:19px;height:19px;color:#36d399;flex:none}
+  .hero-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;min-height:380px;background:linear-gradient(160deg,#15406e,#0c2c50);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-photo .badge{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(10,35,66,.86);backdrop-filter:blur(6px);color:#fff;border-radius:12px;padding:11px 16px;display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700}
+  .hero-photo .badge .stars{color:var(--gold)}
+
+  /* QUICK FORM BAND */
+  .quickform{background:#fff;padding:0 24px;margin-top:-34px;position:relative;z-index:6}
+  .qf-inner{max-width:var(--maxw);margin:0 auto;background:#fff;border:1px solid var(--g200);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:24px 28px;display:grid;grid-template-columns:1.1fr 2fr;gap:24px;align-items:center}
+  .qf-copy h3{font-size:1.25rem;font-weight:800;color:var(--navy);line-height:1.2}
+  .qf-copy p{color:var(--g600);font-size:.92rem;margin-top:4px}
+  .qf-form{display:grid;grid-template-columns:1fr 1fr 1.3fr auto;gap:12px;align-items:end}
+  .qf-field label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--g600);margin-bottom:5px}
+  .qf-field input{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--g300);background:var(--g50);font-size:.95rem;font-family:inherit;color:var(--ink)}
+  .qf-form button{padding:13px 22px;height:46px;white-space:nowrap}
+  .qf-note{grid-column:1/-1;font-size:.76rem;color:var(--g500);margin-top:-2px}
+
+  section.block{padding:80px 0}
+  .tag{display:inline-block;color:var(--red);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:800;letter-spacing:-1px;line-height:1.13;color:var(--navy)}
+  .lead{color:var(--g600);font-size:1.04rem;max-width:600px;margin-top:14px}
+  .center .lead{margin-left:auto;margin-right:auto}
+
+  /* REVIEWS (lifted high) */
+  .reviews{background:var(--g50)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+  .rev{background:#fff;border:1px solid var(--g200);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-sm)}
+  .rev .stars{color:var(--gold);font-size:1rem;margin-bottom:12px;letter-spacing:1px}
+  .rev p{color:var(--g700);font-size:.95rem;margin-bottom:16px}
+  .rev .who{display:flex;align-items:center;gap:12px}
+  .rev .av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem}
+  .rev .who b{display:block;color:var(--navy);font-size:.92rem}
+  .rev .who span{font-size:.8rem;color:var(--g600)}
+
+  /* SERVICES */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+  .svc{background:#fff;border:1px solid var(--g200);border-radius:var(--radius);padding:28px 24px;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--g300)}
+  .svc .ic{width:52px;height:52px;border-radius:13px;background:var(--red-soft);display:grid;place-items:center;margin-bottom:16px}
+  .svc .ic svg{width:26px;height:26px;color:var(--red)}
+  .svc h3{font-size:1.14rem;font-weight:800;color:var(--navy);margin-bottom:7px}
+  .svc p{color:var(--g600);font-size:.92rem}
+
+  /* PROBLEMS */
+  .problems{background:linear-gradient(180deg,#eef4fb,#f6f9fc)}
+  .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 44px;margin-top:42px}
+  .prob{display:flex;gap:15px}
+  .prob .pi{width:44px;height:44px;border-radius:11px;background:#fff;border:1px solid var(--g200);display:grid;place-items:center;flex:none;box-shadow:var(--shadow-sm)}
+  .prob .pi svg{width:22px;height:22px;color:var(--navy)}
+  .prob h4{font-size:1.02rem;font-weight:800;color:var(--navy);margin-bottom:2px}
+  .prob p{color:var(--g600);font-size:.89rem}
+
+  /* WHY + WORK PHOTO */
+  .why{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
+  .why-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+  .work-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;min-height:360px;background:linear-gradient(160deg,#15406e,#0c2c50);border:1px solid rgba(255,255,255,.12)}
+  .work-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .work-photo .seal{position:absolute;right:18px;bottom:18px;z-index:2;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#ffd86b,#f5b50a 55%,#cf8f00);display:grid;place-items:center;text-align:center;color:#3a2a00;font-weight:800;box-shadow:0 12px 28px rgba(0,0,0,.4),inset 0 0 0 5px rgba(255,255,255,.35)}
+  .work-photo .seal .big{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;line-height:.9}
+  .work-photo .seal .sm{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+  .why h2{color:#fff}
+  .why .lead{color:#bcd0e8}
+  .why-list{list-style:none;margin-top:24px;display:grid;gap:15px}
+  .why-list li{display:flex;gap:13px;align-items:flex-start;font-size:1rem;color:#e4eefa}
+  .why-list svg{width:23px;height:23px;color:#36d399;flex:none;margin-top:1px}
+  .why-list b{color:#fff;font-weight:800}
+
+  /* AREA */
+  .area{background:var(--g50)}
+  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .area-cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .chip{background:#fff;border:1px solid var(--g200);border-radius:100px;padding:9px 18px;font-weight:600;font-size:.9rem;color:var(--navy);box-shadow:var(--shadow-sm)}
+  .area-map{background:linear-gradient(135deg,var(--navy),var(--navy-3));border-radius:var(--radius-lg);padding:38px;color:#fff;position:relative;overflow:hidden;min-height:240px;display:flex;flex-direction:column;justify-content:flex-end}
+  .area-map::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:20px 20px}
+  .area-map .pin{position:absolute;top:38%;left:46%;width:18px;height:18px;background:var(--red);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 8px rgba(224,30,43,.22)}
+  .area-map b{position:relative;font-size:1.25rem;font-family:'Plus Jakarta Sans',sans-serif}
+  .area-map span{position:relative;color:#bcd0e8;font-size:.9rem}
+
+  .cta-band{background:var(--red);color:#fff;text-align:center;padding:62px 24px}
+  .cta-band h2{color:#fff;margin-bottom:12px}
+  .cta-band p{color:rgba(255,255,255,.85);font-size:1.04rem;margin-bottom:24px}
+
+  footer{background:var(--ink);color:#9fb0c4;padding:54px 0 28px;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .brand-name{color:#fff}
+  footer .brand-sub{color:#7d92ab}
+  .foot-col h5{color:#fff;font-size:.95rem;font-weight:800;margin-bottom:13px}
+  .foot-col a{display:block;color:#9fb0c4;margin-bottom:9px;font-size:.9rem}
+  .foot-col a:hover{color:#fff}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:20px;font-size:.82rem;color:#7d92ab}
+  .demo-note{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 15px;font-size:.78rem;color:#c4d3e6}
+  .demo-note b{color:#fff}
+
+  .g{flex:none}
+  .pill .g,.badge .g{width:16px;height:16px}
+  .g-reviews{display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:#fff;border:1px solid var(--g200);border-radius:100px;padding:9px 18px;box-shadow:var(--shadow-sm);font-size:.92rem;color:var(--g700)}
+  .g-reviews .g{width:20px;height:20px}
+  .g-reviews b{color:var(--navy);font-weight:800}
+  .g-reviews .stars{color:var(--gold);letter-spacing:1px}
+  .foot-map-wrap{display:grid;grid-template-columns:1.7fr 1fr;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:38px}
+  .foot-map{width:100%;height:240px;border:0;display:block}
+  .foot-nap{background:rgba(255,255,255,.04);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+  .foot-nap h5{color:#fff;font-size:1.05rem;font-weight:800;margin-bottom:12px}
+  .foot-nap .nap-addr{display:flex;gap:9px;align-items:flex-start;color:#cdd9e6;font-size:.95rem;margin-bottom:8px}
+  .foot-nap .nap-addr svg{width:18px;height:18px;color:var(--red);flex:none;margin-top:2px}
+  .foot-nap .nap-row{color:#9fb0c4;font-size:.86rem;margin-bottom:16px}
+  .foot-nap .btn{align-self:flex-start}
+
+  .mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;background:var(--red);color:#fff;text-align:center;padding:15px;font-weight:800;font-size:1.05rem;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+  .mcall svg{width:18px;height:18px;vertical-align:-3px;margin-right:6px}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .nav-links,.nav-phone{display:none}
+    .nav-toggle{display:block}
+    .hero-grid{grid-template-columns:1fr;gap:28px;padding:44px 24px 56px}
+    .hero-photo{min-height:260px}
+    .qf-inner{grid-template-columns:1fr;gap:16px}
+    .qf-form{grid-template-columns:1fr 1fr}
+    .qf-form button{grid-column:1/-1}
+    .rev-grid,.svc-grid{grid-template-columns:1fr}
+    .prob-grid,.why-grid,.area-grid,.foot-grid,.foot-map-wrap{grid-template-columns:1fr}
+    .foot-map{height:200px}
+    .work-photo{min-height:240px}
+    .mcall{display:block}
+    body{padding-bottom:60px}
+    section.block{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🚨 Need a one-time cleanup or a new-yard quote? We respond fast — <a href="tel:+19016090480">Call (901) 609-0480</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 60 66" fill="none"><path d="M30 60C15 60 7 48 7 33 7 17 20 7 41 5c2 19-4 36-19 45Z" fill="#0a2342"/><path d="M28 60C26 41 32 23 50 12" stroke="#4CAF50" stroke-width="4.5" stroke-linecap="round"/></svg></span>
+      <span class="brand-lock">
+        <span class="brand-name">Southern Outdoor Services</span>
+        <span class="brand-tag"><i class="rule"></i>CORDOVA LAWN & LANDSCAPE</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#reviews">Reviews</a>
+      <a href="#services">Services</a>
+      <a href="#problems">Problems</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Service Area</a>
+    </nav>
+    <div class="nav-right">
+      <div class="nav-phone">
+        <div class="lbl">Answering now · 24/7</div>
+        <div class="num">(901) 609-0480</div>
+      </div>
+      <a class="btn btn-red" href="tel:+19016090480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a2342" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="pill"><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303C33.654 32.657 29.223 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg> <span class="stars">★★★★★</span> 5.0 · 100+ Google Reviews</span>
+      <h1>Cordova's Trusted Lawn Care, <em>Done Right Every Week.</em></h1>
+      <p class="hero-lead">Dependable mowing, cleanups, and landscaping from a crew that shows up on schedule and leaves your yard looking sharp. Honest pricing, no long contracts, and a property you're proud of.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red btn-lg" href="tel:+19016090480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (901) 609-0480</a>
+        <a class="btn btn-lg" href="#contact" style="background:rgba(255,255,255,.08);color:#fff;border:1.6px solid rgba(255,255,255,.25)">Get A Callback</a>
+      </div>
+      <div class="hero-trust"><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; Insured</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free Quotes</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Satisfaction Guaranteed</span></div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/lawncare-hero.jpg" alt="Southern Outdoor Services Lawn Care in Cordova" loading="eager" onerror="this.style.opacity=0" />
+      <div class="badge"><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303C33.654 32.657 29.223 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg> <span class="stars">★★★★★</span> 5.0 · 100+ Google Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK 3-FIELD FORM -->
+<div class="quickform" id="contact">
+  <div class="qf-inner reveal">
+    <div class="qf-copy">
+      <h3>Get A Fast Callback</h3>
+      <p>Tell us what's going on — we'll call you right back.</p>
+    </div>
+    <form class="qf-form" onsubmit="event.preventDefault();var n=this.querySelector('.qf-note');n.textContent='✓ Demo form — on a live site this sends straight to your phone.';n.style.color='#16a34a';">
+      <div class="qf-field"><label>Name</label><input type="text" placeholder="Your name" required /></div>
+      <div class="qf-field"><label>Phone</label><input type="tel" placeholder="(901) 555-0123" required /></div>
+      <div class="qf-field"><label>How Can We Help?</label><input type="text" placeholder="e.g. weekly mowing" required /></div>
+      <button class="btn btn-red" type="submit">Request Call →</button>
+      <div class="qf-note">No obligation · We call you right back.</div>
+    </form>
+  </div>
+</div>
+
+<!-- REVIEWS (high on page) -->
+<section class="block reviews" id="reviews">
+  <div class="wrap center">
+    <span class="tag">Real reviews</span>
+    <h2>Cordova Keeps Calling Us Back</h2>
+    <p class="lead">A few of the 100+ neighbors who've trusted Southern Outdoor Services with their homes.</p>
+    <div class="g-reviews"><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303C33.654 32.657 29.223 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg> <b>5.0</b> <span class="stars">★★★★★</span> <span>Based On 100+ Google Reviews</span></div>
+  </div>
+  <div class="wrap"><div class="rev-grid"><div class="rev reveal"><div class="stars">★★★★★</div><p>"My yard has never looked better. They show up like clockwork every week, edge everything clean, and never leave a mess behind. Fair price, too."</p><div class="who"><span class="av">KB</span><span><b>Karen B.</b><span>Cordova</span></span></div></div>
+<div class="rev reveal"><div class="stars">★★★★★</div><p>"Hired them for a fall cleanup and ended up keeping them year-round. The crew is professional, on time, and the lawn looks incredible now."</p><div class="who"><span class="av">MD</span><span><b>Mike D.</b><span>Cordova</span></span></div></div>
+<div class="rev reveal"><div class="stars">★★★★★</div><p>"Switched after my old guy kept no-showing. These guys actually communicate and the quality is night and day. Couldn't recommend them more."</p><div class="who"><span class="av">TL</span><span><b>Theresa L.</b><span>Cordova</span></span></div></div></div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="block" id="services">
+  <div class="wrap center">
+    <span class="tag">What we do</span>
+    <h2>Full-Service Lawn Care For Cordova Homes</h2>
+    <p class="lead">Mowing, cleanups, beds, and treatments — we keep Cordova yards healthy, clean, and looking sharp all season long.</p>
+  </div>
+  <div class="wrap"><div class="svc-grid"><div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h9l2.5-6H21M5 16a2 2 0 1 0 0 .01M17 16a2.5 2.5 0 1 0 0 .01M7 10V7h4v3"/></svg></span><h3>Lawn Mowing &amp; Maintenance</h3><p>Clean, even cuts on a schedule that keeps your yard sharp — edged, trimmed, and blown off every single visit.</p></div>
+<div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l6.5 6.5M10.5 10.5l3 3 6 6M10.5 10.5a3 3 0 1 1-4.2 4.2 3 3 0 0 1 4.2-4.2z"/></svg></span><h3>Edging &amp; Trimming</h3><p>Crisp borders along walks, drives, and beds, plus string trimming everywhere the mower can't reach.</p></div>
+<div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13C4 8 8 4 13 4h7v7c0 5-4 9-9 9zM11 20c0-6 3.5-10 9-12"/></svg></span><h3>Leaf Removal &amp; Seasonal Cleanup</h3><p>Spring and fall cleanups that clear leaves, debris, and overgrowth so your property looks cared for again.</p></div>
+<div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5M8.5 17a5 5 0 0 1-1.2-9.85A5 5 0 0 1 16.8 7.2 4 4 0 0 1 15.5 17z"/></svg></span><h3>Mulch &amp; Landscape Beds</h3><p>Fresh mulch, clean bed lines, and healthy plantings that make the whole yard look finished.</p></div>
+<div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10l-1.2 12H8.2zM9 8V6.5a3 3 0 0 1 6 0V8"/><circle cx="10.5" cy="13" r=".8"/><circle cx="13.5" cy="16" r=".8"/></svg></span><h3>Fertilization &amp; Weed Control</h3><p>Treatment programs that thicken your turf and crowd out weeds for a greener, healthier lawn over time.</p></div>
+<div class="svc reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16v-4a4 4 0 0 0-4.2-4A4.5 4.5 0 0 0 8 11.5 4 4 0 0 0 4 16z"/></svg></span><h3>Shrub &amp; Hedge Trimming</h3><p>Shaped, tidy shrubs and hedges that keep your beds looking intentional instead of overgrown.</p></div></div></div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="block problems" id="problems">
+  <div class="wrap">
+    <div style="max-width:600px">
+      <span class="tag">Sound familiar?</span>
+      <h2>We Can Solve Any Lawn Care Problem</h2>
+      <p class="lead">If it's broken, we've fixed it a thousand times. Here's what we get called for most.</p>
+    </div>
+    <div class="prob-grid"><div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M7 21c-.2-4-.6-7-2.2-9.2M11 21c0-5 .1-9-.9-12M15 21c0-5 0-9 1-12M19 21c.2-4 .6-7 2.2-9.2"/></svg></span><div><h4>Overgrown, Patchy Lawn</h4><p>Tired of a yard that always looks unkempt? We get it cut clean and keep it that way week to week.</p></div></div>
+<div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10l-1.2 12H8.2zM9 8V6.5a3 3 0 0 1 6 0V8"/><circle cx="10.5" cy="13" r=".8"/><circle cx="13.5" cy="16" r=".8"/></svg></span><div><h4>Weeds Taking Over</h4><p>Crabgrass and dandelions spreading fast? Our treatment program crowds them out and thickens the turf.</p></div></div>
+<div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13C4 8 8 4 13 4h7v7c0 5-4 9-9 9zM11 20c0-6 3.5-10 9-12"/></svg></span><div><h4>Leaves &amp; Yard Debris Piling Up</h4><p>Leaves smothering the grass? We clear it all and haul it off so your lawn can breathe again.</p></div></div>
+<div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16v-4a4 4 0 0 0-4.2-4A4.5 4.5 0 0 0 8 11.5 4 4 0 0 0 4 16z"/></svg></span><div><h4>Messy, Overgrown Beds</h4><p>Shapeless shrubs and weedy beds drag the whole property down. We clean and shape them right up.</p></div></div>
+<div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h4>No Time To Keep Up</h4><p>Busy schedule? We mow, edge, and maintain on a set schedule so you never have to think about it.</p></div></div>
+<div class="prob reveal"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l6.5 6.5M10.5 10.5l3 3 6 6M10.5 10.5a3 3 0 1 1-4.2 4.2 3 3 0 0 1 4.2-4.2z"/></svg></span><div><h4>Ragged Edges &amp; Borders</h4><p>Sloppy lines along walks and drives look unfinished. We cut crisp, clean borders every visit.</p></div></div></div>
+  </div>
+</section>
+
+<!-- WHY + WORK PHOTO -->
+<section class="block why" id="why">
+  <div class="wrap why-grid">
+    <div class="work-photo">
+      <img src="assets/lawncare-work.jpg" alt="Southern Outdoor Services crew at work" loading="lazy" onerror="this.style.opacity=0" />
+      <div class="seal"><span class="big">100%</span><span class="sm">Guarantee</span></div>
+    </div>
+    <div>
+      <span class="tag" style="color:#ff6671">The no-surprises promise</span>
+      <h2>Why Cordova Trusts Southern Outdoor Services</h2>
+      <p class="lead">We earn the call back the hard way — by doing right by every home we step into.</p>
+      <ul class="why-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Free, No-Pressure Quotes.</b> We walk the property, listen to what you want, and quote it before any work starts.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>We Show Up When We Say.</b> Reliable crews on a set schedule — your yard gets done without you chasing us.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Licensed &amp; Insured.</b> Local, insured pros who treat your property like it's their own.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Satisfaction Guaranteed.</b> If a cut or cleanup isn't right, we come back and make it right — no hassle.</span></li></ul>
+      <a class="btn btn-red btn-lg" href="tel:+19016090480" style="margin-top:28px">Talk To Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="block area" id="area">
+  <div class="wrap area-grid">
+    <div>
+      <span class="tag">Where we work</span>
+      <h2>Proudly Serving Greater Memphis</h2>
+      <p class="lead">Fast, local, and on the way. If you're in or around these areas, we've got you — same day.</p>
+      <div class="area-cities"><span class="chip">Cordova</span><span class="chip">Memphis</span><span class="chip">Germantown</span><span class="chip">Collierville</span><span class="chip">Bartlett</span><span class="chip">Lakeland</span><span class="chip">Arlington</span></div>
+    </div>
+    <div class="area-map">
+      <span class="pin"></span>
+      <b>Based in Cordova</b>
+      <span>Trucks staged locally for fast arrival.</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Got A Lawn Care Problem? Let's Fix It Today.</h2>
+    <p>Licensed, insured lawn pros you can count on. Free quotes and reliable, on-schedule service across Cordova.</p>
+    <a class="btn btn-white btn-lg" href="tel:+19016090480" style="display:inline-flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (901) 609-0480</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-map-wrap">
+      <iframe class="foot-map" src="https://maps.google.com/maps?q=Cordova%2C%20TN&z=14&output=embed" loading="lazy" title="Southern Outdoor Services location on Google Maps"></iframe>
+      <div class="foot-nap">
+        <h5>Find Us</h5>
+        <div class="nap-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Cordova, TN</span></div>
+        <div class="nap-row">Open 24/7 · Same-Day Service Across Cordova</div>
+        <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Cordova%2C%20TN" target="_blank" rel="noopener">Get Directions →</a>
+      </div>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <span class="brand-text">
+          <span class="brand-name" style="font-size:1.2rem;display:block">Southern Outdoor Services</span>
+          <span class="brand-sub">Licensed · Insured · Cordova</span>
+        </span>
+        <p style="margin-top:14px;max-width:320px">Dependable lawn care and landscaping for Cordova homes and businesses. Licensed, insured, and on schedule — with a yard you're proud of.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5><a href="#services">Lawn Mowing &amp; Maintenance</a>
+        <a href="#services">Edging &amp; Trimming</a>
+        <a href="#services">Leaf Removal &amp; Seasonal Cleanup</a>
+        <a href="#services">Mulch &amp; Landscape Beds</a>
+        <a href="#services">Fertilization &amp; Weed Control</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#why">Why Choose Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#area">Service Area</a>
+        <a href="tel:+19016090480">(901) 609-0480</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Southern Outdoor Services · Cordova · All rights reserved.</span>
+      <span class="demo-note">🎨 Sample site by <b>Coldwater Labs</b> — not a real business</span>
+    </div>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+19016090480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now · (901) 609-0480</a>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
