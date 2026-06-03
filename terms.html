@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Terms | Coldwater Labs</title>
+  <meta name="description" content="Coldwater Labs Service Terms — plain-language terms for our flat-fee website service. Paying your deposit means you agree to these terms." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #15314E; --accent: #2E6BB8; --accent-dark: #235699; --accent-light: #7FB3E0;
+      --white: #ffffff; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-400: #94a3b8;
+      --gray-600: #475569; --green: #22c55e; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 64px; border-bottom: 1px solid var(--gray-200);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; text-decoration: none; }
+    .nav-wordmark span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { color: var(--gray-600); font-size: 1.05rem; font-weight: 600; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: var(--white) !important; font-weight: 700; font-size: 0.875rem; padding: 9px 20px; border-radius: 6px; }
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* Terms header */
+    .terms-head { background: var(--navy); color: var(--white); padding: 124px 5% 56px; text-align: center; }
+    .terms-head .section-label { color: var(--accent-light); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+    .terms-head h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; }
+    .terms-head .updated { color: #b8cce0; font-size: 0.9rem; margin-top: 14px; }
+
+    /* Acceptance banner */
+    .accept-banner { max-width: 820px; margin: -32px auto 0; background: var(--white); border: 1px solid var(--gray-200); border-left: 5px solid var(--accent); border-radius: 12px; padding: 22px 28px; box-shadow: 0 12px 30px rgba(21,49,78,0.10); position: relative; z-index: 2; }
+    .accept-banner strong { color: var(--navy); }
+    .accept-banner p { color: var(--gray-600); font-size: 1rem; }
+
+    /* Article */
+    article { max-width: 820px; margin: 0 auto; padding: 48px 5% 72px; }
+    article h2 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; color: var(--navy); margin: 40px 0 12px; padding-top: 8px; }
+    article h2:first-child { margin-top: 0; }
+    article h2 .num { color: var(--accent); margin-right: 10px; }
+    article p { color: #33475b; font-size: 1.02rem; margin-bottom: 14px; }
+    article ul { list-style: none; margin: 0 0 16px; }
+    article ul li { position: relative; padding: 7px 0 7px 26px; color: #33475b; font-size: 1.02rem; border-bottom: 1px solid var(--gray-100); }
+    article ul li:last-child { border-bottom: none; }
+    article ul li::before { content: '✓'; position: absolute; left: 0; top: 7px; color: var(--green); font-weight: 800; }
+    article strong { color: var(--navy); }
+    .pill { display: inline-block; background: var(--gray-100); color: var(--navy); font-weight: 700; font-size: 0.92rem; padding: 2px 9px; border-radius: 6px; }
+    .terms-foot-note { margin-top: 44px; padding: 22px 26px; background: #f5f8fb; border-radius: 12px; color: var(--gray-600); font-size: 0.95rem; }
+    .terms-foot-note strong { color: var(--navy); }
+
+    footer { background: var(--navy); color: #9fb3c8; padding: 32px 5%; text-align: center; font-size: 0.85rem; }
+    footer a { color: var(--accent-light); text-decoration: none; }
+    footer strong { color: var(--white); }
+
+    @media (max-width: 768px) {
+      .nav-links { gap: 0; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .terms-head { padding-top: 100px; }
+      article { padding: 40px 7% 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="26" height="31" viewBox="0 0 40 48" fill="none" aria-label="Coldwater Labs logo">
+      <defs><linearGradient id="pinGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E6BB8"/><stop offset="1" stop-color="#7FB3E0"/></linearGradient></defs>
+      <path d="M20 47C20 47 5 30 5 18A15 15 0 1 1 35 18C35 30 20 47 20 47Z" fill="url(#pinGrad)"/>
+      <rect x="11" y="9.5" width="18" height="16" rx="3" fill="#ffffff"/>
+      <rect x="13.6" y="12" width="12.8" height="3.4" rx="1" fill="#2E6BB8"/>
+      <rect x="13.6" y="16.6" width="3.6" height="3.6" rx="0.8" fill="#FF6153"/>
+      <rect x="18.2" y="16.6" width="3.6" height="3.6" rx="0.8" fill="#22C55E"/>
+      <rect x="22.8" y="16.6" width="3.6" height="3.6" rx="0.8" fill="#FBBF24"/>
+      <rect x="13.6" y="21.8" width="12.8" height="1.5" rx="0.75" fill="#cbd5e1"/>
+    </svg>
+    <span class="nav-wordmark">Coldwater <span>Labs</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="pricing.html">Pricing</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#industries">Industries</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact" class="nav-cta">Get My Free Quote</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="terms-head">
+  <span class="section-label">The Fine Print, In Plain English</span>
+  <h1>Coldwater Labs Service Terms</h1>
+  <p class="updated">Last updated: June 3, 2026</p>
+</header>
+
+<div class="accept-banner">
+  <p><strong>How you accept these terms:</strong> When you pay your deposit, you're agreeing to the terms on this page. That's it — no fine print you can't read. For larger projects we may also ask you to e-sign a short agreement, but the terms are the same as what's below.</p>
+</div>
+
+<article>
+
+  <h2><span class="num">1.</span>What you're getting</h2>
+  <p>We design and deliver a website for your local service business under the package you choose. The scope is set when you start, so everyone's clear on what's included. Anything outside that package is quoted separately as an add-on (see Section 6).</p>
+  <ul>
+    <li><strong>Website — $697.</strong> A conversion-focused site (one page, or up to three if you need them): hero with headline, photo, and tap-to-call button; services section; a "problems we solve" section; links to your Google, Yelp, and Facebook reviews; a contact section with embedded map, simple form, address, hours, and phone; on-page local SEO basics (titles, meta, headings, image optimization, LocalBusiness schema); a fast, mobile-friendly build; a 20–30 minute training video; and full file + login handover.</li>
+    <li><strong>Website + Local Visibility — $997.</strong> Everything above, plus full on-site SEO setup and submission to Google, instant lead-to-text, a diagnostic-led Google Business Profile tune-up (if your profile already works well, we leave it alone and tell you so), name/address/phone cleanup across the major directories, and a clean migration on your existing domain if you already have a site.</li>
+  </ul>
+  <p>Both packages include a 7-day revision window (Section 5). Hosting is yours to own (Section 7).</p>
+
+  <h2><span class="num">2.</span>Payment</h2>
+  <p>Each package is a one-time, flat fee — <span class="pill">$697</span> or <span class="pill">$997</span>. No subscriptions, no monthly bills. Payment is invoiced and collected through <strong>Square</strong>.</p>
+  <ul>
+    <li><strong>Deposit — 50% to begin:</strong> $348.50 (Website) or $498.50 (Website + Local Visibility).</li>
+    <li><strong>Balance — the remaining 50%</strong> is due at your sign-off, before the site goes live: $348.50 or $498.50.</li>
+  </ul>
+  <p>We don't start work until the deposit is in, and we don't put your site live until the balance is paid. If the balance isn't paid within 7 days of sign-off, we'll pause handover of your files and access until it is.</p>
+
+  <h2><span class="num">3.</span>What we need from you</h2>
+  <p>So we can hit the timeline, please send the following within <strong>5 business days</strong> of paying your deposit:</p>
+  <ul>
+    <li>Your business name, phone, address, and hours</li>
+    <li>The email and cell number where you want new leads sent</li>
+    <li>The services you want listed</li>
+    <li>3–10 photos (storefront, work examples, team — phone photos are fine)</li>
+    <li>Your logo or preferred colors, if you have them</li>
+    <li>Links to your Google, Yelp, Facebook, and Instagram (if any)</li>
+    <li>Any existing or reference sites you'd like to guide the look</li>
+  </ul>
+  <p>For the Website + Local Visibility package, you grant access <strong>by invitation — never by sharing passwords</strong>: a Google Business Profile "Manager" invite, and delegated or screen-shared access to your domain's DNS at go-live. If content comes in late, the timeline shifts to match.</p>
+
+  <h2><span class="num">4.</span>Timeline</h2>
+  <p>Once we have everything we need, your preview is typically ready within <strong>7–10 business days</strong> (often sooner). Need it faster? Ask — rush delivery is available. Delays in getting us your content push the timeline back accordingly. As a backstop, if we fail to deliver within <strong>14 business days</strong> of receiving all your required content, you may request a full refund.</p>
+
+  <h2><span class="num">5.</span>Your free revision week</h2>
+  <p>You get <strong>7 calendar days</strong> of free revisions after your site is delivered. During that week we'll make reasonable text, photo, and layout adjustments at no extra charge. After the week closes, changes are handled à la carte (Section 6).</p>
+
+  <h2><span class="num">6.</span>Changes after your first week</h2>
+  <p>Past the free week, updates are pay-as-you-go — no packages, no retainer. You decide the work, we tell you the bucket, and you pay only for what you ask for:</p>
+  <ul>
+    <li><strong>Small — $47.</strong> Swap text, update hours or phone, change out a photo or two.</li>
+    <li><strong>Medium — $147.</strong> Add a section, a new page, or a contact/booking form.</li>
+    <li><strong>Big — $297.</strong> A full page redesign, or several pages reworked at once.</li>
+    <li><strong>Bundles:</strong> 3 changes for $247, or 5 changes for $397.</li>
+  </ul>
+  <p>Bigger than a Big Change is really a new project — you'll get a fair flat quote up front before anything starts.</p>
+
+  <h2><span class="num">7.</span>Hosting</h2>
+  <p>You own and pay for your own web hosting (we'll point you to solid options, usually under $5/month). We don't manage, maintain, or pay for hosting on your behalf. Keeping it simple and in your name means the site is always yours.</p>
+
+  <h2><span class="num">8.</span>Ownership</h2>
+  <p>When your final payment clears, you receive all exported website files, all login credentials, and full ownership of the finished site — keep it, move it, change it, whatever you want. We'd love to show the finished site in our portfolio, but if you'd rather we didn't, just tell us in writing and we won't.</p>
+
+  <h2><span class="num">9.</span>Cancellations &amp; refunds</h2>
+  <ul>
+    <li><strong>Cancel before work begins:</strong> your deposit is refunded in full, less any payment-processing fees.</li>
+    <li><strong>Cancel after work has begun:</strong> the deposit is non-refundable, and any work completed to that point remains ours.</li>
+    <li><strong>If we miss the deadline:</strong> if we fail to deliver within 14 business days of having everything we need (Section 3), you may request a full refund.</li>
+  </ul>
+
+  <h2><span class="num">10.</span>What we don't promise</h2>
+  <p>We build the foundation right, but we don't promise specific Google rankings, call volumes, or business results — anyone who does is selling you something. We're also not responsible for changes made by third-party platforms (Google, Yelp, Facebook, your hosting provider) after delivery. Our total responsibility under these terms is limited to the amount you've paid us.</p>
+
+  <h2><span class="num">11.</span>The whole deal</h2>
+  <p>These terms are the full understanding between us. Any changes to them need to be agreed in writing by both sides. Paying your deposit confirms you've read and accepted everything on this page.</p>
+
+  <div class="terms-foot-note">
+    <p>Questions about any of this before you start? That's what the first call is for. Reach us anytime at <strong>hello@coldwaterlabs.com</strong> or <strong>(901) 403-7087</strong> — a real person answers, never a call center.</p>
+  </div>
+
+</article>
+
+<footer>
+  <strong>Coldwater Labs</strong> · Germantown, TN · <a href="tel:+19014037087">(901) 403-7087</a> · <a href="mailto:hello@coldwaterlabs.com">hello@coldwaterlabs.com</a>
+  <br /><br />
+  © 2026 Coldwater Labs. All rights reserved. · <a href="index.html">Home</a> · <a href="pricing.html">Pricing</a>
+</footer>
+
+</body>
+</html>
