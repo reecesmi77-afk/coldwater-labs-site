@@ -260,7 +260,7 @@
         <a class="btn btn-red btn-lg" href="tel:+19015550147"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (901) 555-0147</a>
         <a class="btn btn-lg" href="#contact" style="background:rgba(255,255,255,.08);color:#fff;border:1.6px solid rgba(255,255,255,.25)">Get A Callback</a>
       </div>
-      <div class="hero-trust"><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; Insured</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Upfront Pricing</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24/7 Emergency</span></div>
+      <div class="hero-trust"><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Licensed &amp; Insured</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Upfront Pricing</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24/7 Emergency</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free Estimates</span><span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Satisfaction Guaranteed</span></div>
     </div>
     <div class="hero-photo">
       <img src="assets/plumbing-hero.jpg" alt="Mid-South Plumbing Plumbing in Memphis" loading="eager" onerror="this.style.opacity=0" />
@@ -419,6 +419,120 @@
 <script>
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<!-- ===== Coldwater Labs conversion add-ons: Text-Us widget + exit-intent offer (brand-colored) ===== -->
+<style>
+  #cwl-launch{position:fixed;bottom:20px;right:20px;z-index:99998;display:flex;align-items:center;gap:9px;background:var(--red);color:#fff;border:none;border-radius:100px;padding:13px 19px;font-family:'Manrope',system-ui,sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;box-shadow:var(--shadow-red);transition:transform .15s,background .2s}
+  #cwl-launch:hover{background:var(--red-dark);transform:translateY(-2px)}
+  #cwl-launch svg{width:20px;height:20px}
+  #cwl-nudge{position:fixed;bottom:84px;right:20px;z-index:99999;width:250px;max-width:calc(100vw - 40px);background:#fff;border-radius:14px;box-shadow:var(--shadow);font-family:'Manrope',system-ui,sans-serif;padding:14px 16px;display:none;cursor:pointer}
+  #cwl-nudge.open{display:block;animation:cwlpop .2s ease-out}
+  #cwl-nudge p{font-size:.84rem;color:var(--g700);margin:0;line-height:1.5;padding-right:10px}
+  #cwl-nudge .tag2{display:block;font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--red);margin-bottom:5px}
+  #cwl-nudge-x{position:absolute;top:8px;right:10px;background:none;border:none;color:var(--g500);font-size:17px;line-height:1;cursor:pointer}
+  #cwl-card{position:fixed;bottom:84px;right:20px;z-index:99999;width:300px;max-width:calc(100vw - 40px);background:#fff;border-radius:16px;box-shadow:var(--shadow);font-family:'Manrope',system-ui,sans-serif;overflow:hidden;display:none}
+  #cwl-card.open{display:block;animation:cwlpop .18s ease-out}
+  @keyframes cwlpop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  #cwl-card .cwl-head{background:var(--navy);color:#fff;padding:16px 18px;position:relative}
+  #cwl-card .cwl-head b{font-size:.95rem;font-weight:800;display:block}
+  #cwl-card .cwl-head span{font-size:.78rem;color:#b8cce0;line-height:1.45;display:block;margin-top:3px}
+  #cwl-card .cwl-bd{padding:15px 18px 18px}
+  #cwl-card .cwl-chips{display:flex;flex-direction:column;gap:8px;margin-bottom:13px}
+  #cwl-card .cwl-chip{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--navy);background:var(--red-soft);border:1px solid var(--g200);padding:10px 12px;border-radius:9px}
+  #cwl-card .cwl-chip:hover{filter:brightness(.97)}
+  #cwl-card .cwl-chip svg{width:15px;height:15px;color:var(--red);flex:none}
+  #cwl-card .cwl-div{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--g500);text-align:center;margin:0 0 11px}
+  #cwl-card a.cwl-act{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:.95rem;font-weight:700;padding:12px;border-radius:9px;margin-bottom:9px}
+  #cwl-card a.cwl-txt{background:var(--red);color:#fff}
+  #cwl-card a.cwl-call{background:var(--g100);color:var(--navy)}
+  #cwl-card a.cwl-act:last-child{margin-bottom:0}
+  #cwl-close{position:absolute;top:12px;right:14px;background:none;border:none;color:#fff;font-size:20px;cursor:pointer;line-height:1;opacity:.85}
+  #cwlo-overlay{position:fixed;inset:0;z-index:100000;background:rgba(10,27,42,.6);display:none;align-items:center;justify-content:center;padding:20px;font-family:'Manrope',system-ui,sans-serif}
+  #cwlo-overlay.open{display:flex;animation:cwlofade .2s ease-out}
+  @keyframes cwlofade{from{opacity:0}to{opacity:1}}
+  #cwlo-modal{position:relative;background:#fff;border-radius:18px;max-width:430px;width:100%;box-shadow:0 24px 70px rgba(10,27,42,.45);padding:38px 34px 32px;text-align:center;animation:cwlopop .22s ease-out}
+  @keyframes cwlopop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+  #cwlo-x{position:absolute;top:14px;right:16px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;border:none;font-size:18px;line-height:1;cursor:pointer;opacity:.9}
+  #cwlo-badge{font-size:.82rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--navy);margin:0 0 10px}
+  #cwlo-amount{font-family:'Plus Jakarta Sans',sans-serif;font-size:3.3rem;font-weight:800;line-height:1;color:var(--red);margin:0 0 6px}
+  #cwlo-sub{font-size:1.15rem;font-weight:800;color:var(--navy);margin:0 0 14px}
+  #cwlo-body{font-size:.92rem;color:var(--g600);line-height:1.55;margin:0 auto 22px;max-width:330px}
+  #cwlo-call{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;background:var(--red);color:#fff;font-size:1.1rem;font-weight:800;padding:15px 26px;border-radius:11px;box-shadow:var(--shadow-red);transition:transform .15s,background .2s}
+  #cwlo-call:hover{background:var(--red-dark);transform:translateY(-2px)}
+  #cwlo-call svg{width:20px;height:20px}
+  #cwlo-dismiss{display:block;margin:16px auto 0;background:none;border:none;color:var(--g500);font-size:.82rem;cursor:pointer;text-decoration:underline}
+  @media(max-width:900px){
+    body.cwl-has-mcall #cwl-launch{bottom:74px}
+    body.cwl-has-mcall #cwl-card,body.cwl-has-mcall #cwl-nudge{bottom:138px}
+  }
+</style>
+
+<button id="cwl-launch" aria-label="Text us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Text Us</button>
+<div id="cwl-nudge" role="button" tabindex="0" aria-label="Open text chat">
+  <button id="cwl-nudge-x" aria-label="Dismiss">&times;</button>
+  <span class="tag2">Text Us</span><p id="cwl-nudge-text"></p>
+</div>
+<div id="cwl-card" role="dialog" aria-label="Contact us">
+  <div class="cwl-head"><button id="cwl-close" aria-label="Close">&times;</button><b>Got A Question?</b><span>Text us and we'll get right back to you.</span></div>
+  <div class="cwl-bd">
+    <div class="cwl-chips" id="cwl-chips"></div>
+    <p class="cwl-div">or</p>
+    <a class="cwl-act cwl-txt" id="cwl-text" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Send Your Own Message</a>
+    <a class="cwl-act cwl-call" id="cwl-call2" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Us</a>
+  </div>
+</div>
+<div id="cwlo-overlay" role="dialog" aria-modal="true" aria-label="Special offer">
+  <div id="cwlo-modal">
+    <button id="cwlo-x" aria-label="Close">&times;</button>
+    <p id="cwlo-badge"></p><p id="cwlo-amount"></p><p id="cwlo-sub"></p><p id="cwlo-body"></p>
+    <a id="cwlo-call" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span id="cwlo-call-label"></span></a>
+    <button id="cwlo-dismiss"></button>
+  </div>
+</div>
+
+<script>
+  window.CWL_WIDGET = {phone:"+19015550147",greeting:"Hi! How can we help? Send us a text right here and we'll get back to you in a few minutes.",greetingDelay:4,quickReplies:["How much do you charge?","Are you available today?","Can I get a free quote?","Do you service my area?"]};
+  window.CWL_OFFER = {badge:"Wait — Before You Go!",amount:"$50 Off",subhead:"Any Plumbing Repair",body:"Mention this offer when you call and we'll take $50 off your repair. A real person answers — no call center.",phone:"+19015550147",display:"(901) 555-0147",callLabel:"Call Now",dismissText:"No thanks, maybe later",delaySeconds:15};
+  (function(){
+    var c=window.CWL_WIDGET||{},phone=(c.phone||"").replace(/[^+\d]/g,"");
+    var ti='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+    function sms(m){return "sms:"+phone+"?&body="+encodeURIComponent(m||"");}
+    document.getElementById("cwl-text").href=sms(c.prefill||"Hi! I found you online and have a question.");
+    document.getElementById("cwl-call2").href="tel:"+phone;
+    var cw=document.getElementById("cwl-chips");
+    (c.quickReplies||[]).forEach(function(q){var a=document.createElement("a");a.className="cwl-chip";a.href=sms(q);a.innerHTML=ti+"<span>"+q.replace(/</g,"&lt;")+"</span>";cw.appendChild(a);});
+    if(!(c.quickReplies||[]).length){cw.style.display="none";document.querySelector("#cwl-card .cwl-div").style.display="none";}
+    var card=document.getElementById("cwl-card"),nudge=document.getElementById("cwl-nudge");
+    document.getElementById("cwl-nudge-text").textContent=c.greeting||"Hi! How can we help?";
+    function openCard(){nudge.classList.remove("open");card.classList.add("open");}
+    document.getElementById("cwl-launch").addEventListener("click",function(){nudge.classList.remove("open");card.classList.toggle("open");});
+    document.getElementById("cwl-close").addEventListener("click",function(){card.classList.remove("open");});
+    nudge.addEventListener("click",openCard);
+    document.getElementById("cwl-nudge-x").addEventListener("click",function(e){e.stopPropagation();nudge.classList.remove("open");try{sessionStorage.setItem("cwlNudge","1");}catch(_){}});
+    document.body.classList.add("cwl-has-mcall");
+    var d=(typeof c.greetingDelay==="number"?c.greetingDelay:4),seen=false;try{seen=sessionStorage.getItem("cwlNudge")==="1";}catch(_){}
+    if(d>0&&!seen){setTimeout(function(){if(!card.classList.contains("open")){nudge.classList.add("open");try{sessionStorage.setItem("cwlNudge","1");}catch(_){}}},d*1000);}
+  })();
+  (function(){
+    var c=window.CWL_OFFER||{},phone=(c.phone||"").replace(/[^+\d]/g,"");
+    function set(id,v){var el=document.getElementById(id);if(el)el.textContent=v||"";}
+    set("cwlo-badge",c.badge);set("cwlo-amount",c.amount);set("cwlo-sub",c.subhead);set("cwlo-body",c.body);
+    set("cwlo-call-label",(c.callLabel||"Call Now")+(c.display?"  "+c.display:""));set("cwlo-dismiss",c.dismissText||"No thanks");
+    document.getElementById("cwlo-call").href="tel:"+phone;
+    var ov=document.getElementById("cwlo-overlay"),shown=false;
+    function seen(){try{return sessionStorage.getItem("cwloSeen")==="1";}catch(_){return false;}}
+    function show(){if(shown||seen())return;shown=true;try{sessionStorage.setItem("cwloSeen","1");}catch(_){}ov.classList.add("open");}
+    function hide(){ov.classList.remove("open");}
+    document.getElementById("cwlo-x").addEventListener("click",hide);
+    document.getElementById("cwlo-dismiss").addEventListener("click",hide);
+    ov.addEventListener("click",function(e){if(e.target===ov)hide();});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape")hide();});
+    var d=(typeof c.delaySeconds==="number"?c.delaySeconds:15);if(d>0){setTimeout(show,d*1000);}
+    document.addEventListener("mouseout",function(e){if(!e.relatedTarget&&e.clientY<=0)show();});
+    var t=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+    if(t){var ly=window.scrollY,lt=Date.now();window.addEventListener("scroll",function(){var y=window.scrollY,tt=Date.now(),dt=tt-lt;if(dt>0){var v=(ly-y)/dt;if(v>1.2&&y<250)show();}ly=y;lt=tt;},{passive:true});}
+  })();
 </script>
 </body>
 </html>
