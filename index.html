@@ -24,8 +24,8 @@
         "address": { "@type": "PostalAddress", "addressLocality": "Germantown", "addressRegion": "TN", "addressCountry": "US" },
         "priceRange": "$$",
         "makesOffer": [
-          { "@type": "Offer", "name": "Website", "price": "697", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Website + Local Visibility", "price": "997", "priceCurrency": "USD" }
+          { "@type": "Offer", "name": "Website", "price": "497", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Website + Local Visibility", "price": "797", "priceCurrency": "USD" }
         ]
       },
       {
@@ -318,6 +318,10 @@
     .pricing-section { background: var(--navy); color: var(--white); }
     .pricing-section h2 { color: var(--white); }
     .pricing-section .section-intro { color: #b8cce0; }
+    .pricing-grid { display:flex; flex-wrap:wrap; gap:24px; max-width:980px; margin:0 auto 56px; align-items:stretch; justify-content:center; }
+    .pricing-grid .pricing-box { max-width:none; margin:0; flex:1 1 360px; display:flex; flex-direction:column; }
+    .pricing-grid .includes { flex:1; }
+    .tier-name { font-size:1.05rem; font-weight:800; color:var(--white); letter-spacing:-0.01em; margin-bottom:4px; }
     .pricing-box {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.12);
@@ -416,7 +420,8 @@
 
     /* CONTACT */
     .contact-section { background: var(--white); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; max-width: 960px; margin: 0 auto; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 960px; margin: 0 auto; }
+    .form-card { background: #f7f9fc; border: 1px solid var(--gray-200); border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(10,35,66,0.06); }
     .contact-info h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
     .contact-info p { color: var(--gray-600); margin-bottom: 28px; line-height: 1.7; }
     .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -666,7 +671,7 @@
   <div class="mission-inner">
     <span class="section-label" style="color:var(--accent);">Our mission</span>
     <h2>Making a great website simple for local tradesmen.</h2>
-    <p>Most website companies talk over your head, lock you into monthly fees, and disappear when you need them. Coldwater Labs does the opposite. We build you one clean, professional website for one flat fee, set it up so customers can find you and call you, then hand you the keys. No jargon, no subscriptions, no runaround — just a website that works, backed by real people who pick up the phone.</p>
+    <p>Most website companies talk over your head, lock you into monthly fees, and disappear when you need them. Coldwater Labs does the opposite. We build you one clean, professional site for one flat fee — fast and mobile-first, because a site that's slow or clunky on a phone quietly costs you calls every single day. And we build it the way local search actually rewards: a fast, optimized site plus an active, well-tended Google profile — review replies and all — are two of the biggest things Google trusts when it decides who shows up first when a neighbor searches for your trade. Then we hand you the keys — no jargon, no subscriptions, no runaround, just a website that works, backed by real people who pick up the phone.</p>
   </div>
 </section>
 
@@ -1043,21 +1048,40 @@
     <p class="section-intro">Other companies charge $150–$300 every month, forever. You pay one flat fee and walk away owning your site.</p>
   </div>
 
-  <div class="pricing-box">
-    <div class="price-amount"><sup>$</sup>697</div>
-    <div class="price-label">One Time · Flat Fee · No Subscriptions</div>
-    <ul class="includes">
-      <li>1–3 page website, built just for you</li>
-      <li>Looks great on phones, tablets, and computers</li>
-      <li>Big tap-to-call button + simple contact form</li>
-      <li>Links to your Google, Yelp & Facebook</li>
-      <li>Set up so Google can find you</li>
-      <li>A map showing customers where to find you</li>
-      <li>7 days of free changes after it's done</li>
-      <li>A short video showing you how to make simple edits</li>
-      <li>Every file and login is yours to keep</li>
-    </ul>
-    <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $697</a>
+  <div class="pricing-grid">
+
+    <div class="pricing-box">
+      <div class="tier-name">Website</div>
+      <div class="price-amount"><sup>$</sup>497</div>
+      <div class="price-label">One Time · Flat Fee · No Subscriptions</div>
+      <ul class="includes">
+        <li>1–3 page website, built just for you</li>
+        <li>Fast &amp; mobile-first — what Google ranks on most</li>
+        <li>Big tap-to-call button + simple contact form</li>
+        <li>Links to your Google, Yelp &amp; Facebook</li>
+        <li>Local SEO + schema so Google can find you</li>
+        <li>A map showing customers where to find you</li>
+        <li>7 days of free changes after it's done</li>
+        <li>Training video — every file &amp; login is yours</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $497</a>
+    </div>
+
+    <div class="pricing-box">
+      <div class="tier-name">Website + Local Visibility</div>
+      <div class="price-amount"><sup>$</sup>797</div>
+      <div class="price-label">One Time · Flat Fee · No Subscriptions</div>
+      <ul class="includes">
+        <li>Everything in Website, plus:</li>
+        <li>Full SEO setup + submitted to Google to get indexed</li>
+        <li>Google Business Profile tune-up (your map listing)</li>
+        <li>Lead-to-text — every form lead texted to your phone</li>
+        <li>Name, address &amp; phone cleanup across Google, Yelp, Facebook &amp; BBB</li>
+        <li>Already have a site? Clean migration on your domain</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="width:100%; display:block; text-align:center;">Get Started — $797</a>
+    </div>
+
   </div>
 
   <!-- Add-on / change-order pricing moved to the dedicated pricing page (to build next) -->
@@ -1070,6 +1094,18 @@
     <h2>Common questions</h2>
   </div>
   <div class="faq-list">
+    <details>
+      <summary>Why can't I just have AI build it for free?</summary>
+      <div class="faq-body">You can get AI to spit out a page that looks like a website — but the look is the easy 20%. The part that actually gets you found on Google and turns visitors into calls — fast load, mobile-first, the structure Google trusts, the right setup — is the 80% that takes real know-how. You're a tradesman, not a web person; your time's worth more on the job. We do the hard part and hand you the finished, working site for one flat fee.</div>
+    </details>
+    <details>
+      <summary>Do I even need a website? Most of my work is word-of-mouth.</summary>
+      <div class="faq-body">Even referrals Google you before they call — they want to see you're real and legit. If there's nothing there, or it looks rough, a lot of them hesitate or call the next name on the list. A clean, fast site closes that gap and turns "let me check them out" into a phone call.</div>
+    </details>
+    <details>
+      <summary>What if I already have a website?</summary>
+      <div class="faq-body">We build you a faster, better-converting one and, if you want, migrate it cleanly onto your existing domain with redirects so you keep what Google already knows about you. Most sites we replace are slow on a phone — which is exactly what's quietly costing calls.</div>
+    </details>
     <details>
       <summary>Do I have to pay anything every month?</summary>
       <div class="faq-body">No. It's a one-time fee and that's it. The only ongoing cost is web hosting, which you set up yourself — there are good options under $5/month, and we'll walk you through it so it's easy.</div>
@@ -1116,7 +1152,7 @@
     <div class="contact-info">
       <span class="section-label">Get in Touch</span>
       <h2>Let's talk about your business.</h2>
-      <p>Fill out the form or just call or text us — a real person answers, never a call center. We'll get back to you within one business day, and can usually give you a price on the first call.</p>
+      <p>Fill out the form or just call or text us — a real person answers, never a call center. We get back to you ASAP, and can usually give you a price on the first call.</p>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
         <div class="contact-detail-text">
@@ -1134,13 +1170,16 @@
       <div class="contact-detail">
         <div class="contact-detail-icon">⏱️</div>
         <div class="contact-detail-text">
-          <strong>We'll Get Back to You</strong>
-          <span>Within 1 business day</span>
+          <strong>We Call You Back</strong>
+          <span>ASAP</span>
         </div>
       </div>
-      <a href="https://calendar.app.google/dRqpRsDyxp6sXiWD8" class="nav-cta" target="_blank" rel="noopener" style="margin-top:20px;">Book a Free Demo Call →</a>
+      <div style="margin-top:26px; padding-top:22px; border-top:1px solid #e7ecf2;">
+        <p style="margin:0 0 12px; color:#5b6b7e; font-size:0.95rem;">Prefer to pick a time? Grab a free 15-minute demo call:</p>
+        <a href="https://calendar.app.google/dRqpRsDyxp6sXiWD8" class="nav-cta" target="_blank" rel="noopener">Book a Free Demo Call →</a>
+      </div>
     </div>
-    <div>
+    <div class="form-card">
       <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="subject" value="New lead from coldwaterlabs.com" />
@@ -1152,7 +1191,7 @@
         <textarea name="message" placeholder="What kind of business, and how can we help?"></textarea>
         <button type="submit" class="form-submit">Send Message →</button>
       </form>
-      <div class="form-success" id="formSuccess">✅ Got it! We'll reach out within one business day.</div>
+      <div class="form-success" id="formSuccess">✅ Got it! We'll reach out ASAP.</div>
     </div>
   </div>
 </section>
